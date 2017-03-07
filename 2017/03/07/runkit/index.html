@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>runkit | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="medium 에서 node.js 디자인 패턴 관련 글을 읽다가 아무 생각없이클릭해봤는데 뭔가 대단해보이는 서비스를 발견했다.
+그 이름은 바로 runkit
+저자는 일일이 로컬에 노드 모듈을 설치해서 테스트 해보기 귀찮으면, 이 걸 써보라고 권장하고 있다.샘플로 제공하는 코드를 보면 우주 정거장의 위치를 제공해주는 소스코드도 포함되어 있다.현재시간 기준으로 네">
+<meta property="og:type" content="article">
+<meta property="og:title" content="runkit">
+<meta property="og:url" content="http://parkseokje.github.io/2017/03/07/runkit/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="medium 에서 node.js 디자인 패턴 관련 글을 읽다가 아무 생각없이클릭해봤는데 뭔가 대단해보이는 서비스를 발견했다.
+그 이름은 바로 runkit
+저자는 일일이 로컬에 노드 모듈을 설치해서 테스트 해보기 귀찮으면, 이 걸 써보라고 권장하고 있다.샘플로 제공하는 코드를 보면 우주 정거장의 위치를 제공해주는 소스코드도 포함되어 있다.현재시간 기준으로 네">
+<meta property="og:updated_time" content="2017-03-07T02:39:49.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="runkit">
+<meta name="twitter:description" content="medium 에서 node.js 디자인 패턴 관련 글을 읽다가 아무 생각없이클릭해봤는데 뭔가 대단해보이는 서비스를 발견했다.
+그 이름은 바로 runkit
+저자는 일일이 로컬에 노드 모듈을 설치해서 테스트 해보기 귀찮으면, 이 걸 써보라고 권장하고 있다.샘플로 제공하는 코드를 보면 우주 정거장의 위치를 제공해주는 소스코드도 포함되어 있다.현재시간 기준으로 네">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://parkseokje.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-runkit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/07/runkit/" class="article-date">
+  <time datetime="2017-03-07T02:38:56.000Z" itemprop="datePublished">2017-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      runkit
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><a href="https://medium.com/@kalin.chernev/reflecting-on-node-js-design-patterns-6cc6eaa584#.uo8rqyv38" target="_blank" rel="external">medium</a></strong> 에서 node.js 디자인 패턴 관련 글을 읽다가 아무 생각없이<br>클릭해봤는데 뭔가 대단해보이는 서비스를 발견했다.</p>
+<p>그 이름은 바로 <strong><a href="https://runkit.com/home" target="_blank" rel="external">runkit</a></strong></p>
+<p>저자는 일일이 로컬에 노드 모듈을 설치해서 테스트 해보기 귀찮으면, 이 걸 써보라고 권장하고 있다.<br>샘플로 제공하는 코드를 보면 우주 정거장의 위치를 제공해주는 소스코드도 포함되어 있다.<br>현재시간 기준으로 네팔을 지나가고 있다ㅋ</p>
+<p>들어가보니 깃 계정으로 사인업을 거친 후에는 nodebook 이라는 유닛을 생성할 수 있으며,<br>이 안에 여러가지 스크립트를 작성할 수 있다. 사용하고 싶은 노드 모듈은 import 만 하면 된다.</p>
+<p>깃과 연동이 되며 노트북 마다 유니크한 키로 새로운 깃 저장소가 생성되는 구조이며, 실행결과를<br>바로 확인해볼 수 있다. 또한 제공되는 endpoint (url) 를 통해, 브라우져나 터미널에서 curl 명령어로 리턴 결과를 확인해 볼 수도 있다.</p>
+<p>개발 단계에서 목업 API를 개발하거나 간단한 코드를 빠른 시간 내에 검증해볼 수 있다는<br>장점이 있을 것 같다. <code>나중에봐야징ㅋ</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://parkseokje.github.io/2017/03/07/runkit/" data-id="cizyxk8mo0001om6bz6emob2e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/07/codeReview/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">codeReview</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/codereview/">codereview</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/codereview/" style="font-size: 10px;">codereview</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/07/runkit/">runkit</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/07/codeReview/">codeReview</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/07/connectionPool/">connectionPool</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/07/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Seokje Park<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
