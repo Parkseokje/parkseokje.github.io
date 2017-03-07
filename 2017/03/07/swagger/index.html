@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>swagger | 석제의 블로그</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="예전부터 들어만 보았지 실제로 사용해본적이 없었던 [Swagger] 에 대해 간단한 경험을 공유해보려 한다.우선 해당 사이트의 설명을 보면, 아래와 같다.
+12345678Swagger is a powerful open source framework backedby a large ecosystem of toolsthat helps you design, bui">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swagger">
+<meta property="og:url" content="http://parkseokje.github.io/2017/03/07/swagger/index.html">
+<meta property="og:site_name" content="석제의 블로그">
+<meta property="og:description" content="예전부터 들어만 보았지 실제로 사용해본적이 없었던 [Swagger] 에 대해 간단한 경험을 공유해보려 한다.우선 해당 사이트의 설명을 보면, 아래와 같다.
+12345678Swagger is a powerful open source framework backedby a large ecosystem of toolsthat helps you design, bui">
+<meta property="og:updated_time" content="2017-03-07T04:23:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swagger">
+<meta name="twitter:description" content="예전부터 들어만 보았지 실제로 사용해본적이 없었던 [Swagger] 에 대해 간단한 경험을 공유해보려 한다.우선 해당 사이트의 설명을 보면, 아래와 같다.
+12345678Swagger is a powerful open source framework backedby a large ecosystem of toolsthat helps you design, bui">
+  
+    <link rel="alternate" href="/atom.xml" title="석제의 블로그" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">석제의 블로그</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://parkseokje.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-swagger" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/07/swagger/" class="article-date">
+  <time datetime="2017-03-07T04:21:38.000Z" itemprop="datePublished">2017-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      swagger
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>예전부터 들어만 보았지 실제로 사용해본적이 없었던 [Swagger] 에 대해 간단한 경험을 공유해보려 한다.<br>우선 해당 사이트의 설명을 보면, 아래와 같다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Swagger is a powerful open source framework backed</div><div class="line">by a large ecosystem of tools</div><div class="line">that helps you design, build, document,</div><div class="line">and consume your RESTful APIs.</div><div class="line"></div><div class="line">Swagger (스웨거) 는 수많은 도구로 이루어진 에코시스템이 뒷받침하고 있으며,</div><div class="line">RESTful API를 디자인하고, 빌드하고, 문서화하며, 소비할 수 있도록</div><div class="line">도와주는 강력한 오프소스 프레임웍이다.</div></pre></td></tr></table></figure>
+<p>음.. 에코시스템은 뭐고,<br>API 는 알겠는데, RESTful 은 뭘까?</p>
+<p>에코시스템의 사전적 의미는 <a href="https://www.merriam-webster.com/dictionary/ecosystem" target="_blank" rel="external">여기</a>에서 확인할 수 있다.<br>여기서의 에코시스템은 Swagger 에는 다양한 라이브러리와 프레임웍으로<br>구성된 <a href="http://swagger.io/open-source-integrations/" target="_blank" rel="external">툴</a>들이 존재하는데, 이들을 묶어서 부르는 것으로 풀이하면 무방할 것 같다.<br>RESTful에 대한 자세한 설명은 <a href="http://www.iamcorean.net/22" target="_blank" rel="external">이곳</a>을 참고해주기 바란다.</p>
+<p>그래서 Swagger 를 이용해서 무엇을 어떻게 하는건가?<br>간단히 말해서, node express 기반으로 만들어진 swagger-express<br>를 이용해 API를 개발한 다음(기존 express 개발 방식과는 완전히 상이하다.), swagger-express 서버를 실행시키면,<br>API 서비스를 제공할 수 있게되며, 별도로 작성한 Swagger 에디터를 이용해 작성한, API 문서를 포함시키면,<br>API 문서도 서비스로 제공할 수 있다는 것이다.</p>
+<p><strong>그럼 바로 시작해보자.</strong> </p>
+<p>아래 내용은 기본적인 준비사항이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">1. swagger-node 글로벌 설치</div><div class="line">npm install -g swagger</div><div class="line"></div><div class="line">2. 프로젝트 생성</div><div class="line">swagger project create [project_name]</div><div class="line">cd [project_name]</div><div class="line"></div><div class="line">(선택사항)</div><div class="line">git init</div><div class="line">git remote add [remote_url])</div><div class="line">git pull origin [remote_branch] --allow-unrelated-histories</div><div class="line">(git repo 생성 시 .gitignore/readme 파일을 추가한 경우)</div><div class="line"></div><div class="line">3.API 디자인</div><div class="line">swagger project edit 또는</div><div class="line">IDE에서 api/swagger/swagger.yaml 파일을 직접 수정</div><div class="line"></div><div class="line">4. 프로젝트 시작</div><div class="line">swagger project start</div><div class="line">curl http://127.0.0.1:10010/hello?name=Scott</div><div class="line">(&quot;Hello, Scott!&quot; 가 찍히면, 성공)</div></pre></td></tr></table></figure>
+<p>그다음 API 문서를 웹페이지로 제공해주는 swagger ui를 설정해보자.</p>
+<p><strong>app.js</strong> 에 추가<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> SwaggerUi = <span class="built_in">require</span>(<span class="string">'swagger-tools/middleware/swagger-ui'</span>);</div><div class="line"></div><div class="line">SwaggerExpress.create(config, <span class="function"><span class="keyword">function</span>(<span class="params">err, swaggerExpress</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// add swagger-ui (/docs)</span></div><div class="line">  app.use(SwaggerUi(swaggerExpress.runner.swagger));</div><div class="line"></div><div class="line">  <span class="comment">// install middleware</span></div><div class="line">  swaggerExpress.register(app);</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span>를 실행해보자.</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">다음 사항으로는, API 접근을 위한 보안설정을 해보자.</div><div class="line"></div><div class="line">**app.js** 에 추가</div><div class="line">```javascript</div><div class="line">var config = &#123;</div><div class="line">  appRoot: __dirname, // required config</div><div class="line"></div><div class="line">  swaggerSecurityHandlers: &#123;</div><div class="line">    api_key: function (req, authOrSecDef, scopesOrApiKey, cb) &#123;</div><div class="line">      // your security code</div><div class="line">      // 요청 헤더값이 api_key 이고 값이 1234 일 경우에만 실행을 허용한다</div><div class="line">      if (&apos;1234&apos; === scopesOrApiKey) &#123;</div><div class="line">        cb();</div><div class="line">      &#125; else &#123;</div><div class="line">        cb(new Error(&apos;access denied!&apos;));</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><strong>api/swagger/swagger.yaml</strong> 에 추가<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># api security</span></div><div class="line"><span class="attr">securityDefinitions:</span></div><div class="line">  <span class="comment"># 오픈 api일 경우</span></div><div class="line"><span class="attr">  UserSecurity:</span></div><div class="line"><span class="attr">    type:</span> basic</div><div class="line">  <span class="comment"># POST, DELETE, UPDATE 등에 적용</span></div><div class="line"><span class="attr">  AdminSecurity:</span></div><div class="line"><span class="attr">    type:</span> apiSecretKey</div><div class="line"><span class="attr">    in:</span> header</div><div class="line">    <span class="comment">#name 이 변경되면 반드시 app.js 의 api_key 또한</span></div><div class="line">    <span class="comment">#adminSecretKey 로 변경해야한다!</span></div><div class="line"><span class="attr">    name:</span> adminSecretKey <span class="comment"># 사용자 정의</span></div><div class="line">  <span class="comment"># 이미지와 같은 정적 파일들에 대해 적용 (선택)</span></div><div class="line"><span class="attr">  MediaSecurity:</span></div><div class="line"><span class="attr">    type:</span> apiKey</div><div class="line"><span class="attr">    in:</span> query</div><div class="line"><span class="attr">    name:</span> mediaSecretKey <span class="comment"># 사용자 정의</span></div><div class="line"></div><div class="line"><span class="comment">#아래 path 부분에 security 에 대한 설정이 없을 경우 디폴트로 적용</span></div><div class="line"><span class="attr">security:</span></div><div class="line"><span class="attr">  - UserSecurity:</span> []</div><div class="line"><span class="comment">#path</span></div><div class="line">...</div></pre></td></tr></table></figure></p>
+<p>securityDefinitions 속성명이 변경되는 경우에는,<br>아래 부분도 함께 <span class="red">변경</span>해주어야 한다.</p>
+<p><strong>app.js</strong> 수정<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var config = &#123;</div><div class="line">  appRoot: __dirname,</div><div class="line">  swaggerSecurityHandlers: &#123;</div><div class="line">    AdminSecurity: ... &lt;--</div></pre></td></tr></table></figure></p>
+<p><strong>api/swagger/swagger.yaml</strong> 에 추가<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="attr">paths:</span></div><div class="line">  /hello:</div><div class="line">    <span class="comment"># binds a127 app logic to a route</span></div><div class="line"><span class="attr">    x-swagger-router-controller:</span> hello_world</div><div class="line"><span class="attr">    get:</span></div><div class="line"><span class="attr">      description:</span> Returns <span class="string">'Hello'</span> to the caller</div><div class="line">      <span class="comment"># GET /hello 요청이 들어왔을 경우에만 적용할 security</span></div><div class="line"><span class="attr">      security:</span></div><div class="line"><span class="attr">        - AdminSecurity:</span> []</div><div class="line">...</div></pre></td></tr></table></figure></p>
+<p><strong>실패 테스트</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl http://127.0.0.1:10010/hello?name=Scott</div><div class="line">&#123;&quot;message&quot;:&quot;access denied!&quot;,&quot;code&quot;:&quot;server_error&quot;,&quot;statusCode&quot;:403&#125;</div></pre></td></tr></table></figure></p>
+<p><span class="red">access denied</span> 되었다는 것을 볼 수 있다.</p>
+<p><strong>성공 테스트</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -X GET --header &apos;adminSecretKey: 1234&apos; http://localhost:10010/hello?name=Scott</div><div class="line">&quot;Hello, Scott!&quot;</div></pre></td></tr></table></figure></p>
+<p>정상적으로 결과가 반한된다.</p>
+<p><strong>TODO</strong></p>
+<p>추후 서버에 올려서 테스트를 진행해볼 것</p>
+<p><strong>참고</strong></p>
+<ul>
+<li><a href="http://apihandyman.io/writing-openapi-swagger-specification-tutorial-part-6-defining-security/" target="_blank" rel="external">API Handyman - defining security</a></li>
+<li><a href="http://blog.jeonghwan.net/swagger-node/" target="_blank" rel="external">김정환님의 블로그</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://parkseokje.github.io/2017/03/07/swagger/" data-id="cizz17nxv00098h6bi5sydy8m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api/">api</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/07/apidoc/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          apidoc
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/07/realty/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">부동산 공부</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/api/">api</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codereview/">codereview</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/expressjs/">expressjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jwt/">jwt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/passport/">passport</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/부동산/">부동산</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/제태크/">제태크</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/api/" style="font-size: 20px;">api</a> <a href="/tags/codereview/" style="font-size: 10px;">codereview</a> <a href="/tags/expressjs/" style="font-size: 10px;">expressjs</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/jwt/" style="font-size: 10px;">jwt</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/passport/" style="font-size: 10px;">passport</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/부동산/" style="font-size: 10px;">부동산</a> <a href="/tags/제태크/" style="font-size: 10px;">제태크</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/07/jwt/">jwt</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/07/apidoc/">apidoc</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/07/swagger/">swagger</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/07/realty/">부동산 공부</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/07/terminalTips/">Terminal Tips</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Seokje Park<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
