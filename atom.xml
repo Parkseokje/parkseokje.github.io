@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://parkseokje.github.io/"/>
-  <updated>2017-03-08T18:12:18.000Z</updated>
+  <updated>2017-03-09T16:18:17.000Z</updated>
   <id>http://parkseokje.github.io/</id>
   
   <author>
@@ -16,11 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Object and Function - 1</title>
+    <link href="http://parkseokje.github.io/2017/03/10/objectAndFunction/"/>
+    <id>http://parkseokje.github.io/2017/03/10/objectAndFunction/</id>
+    <published>2017-03-09T15:12:33.000Z</published>
+    <updated>2017-03-09T16:18:17.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;오늘은 Object 와 Fuction 에 대해 알아보자.&lt;/p&gt;
+&lt;p&gt;우선, Object 에 대해 정의해보자.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div 
+    
+    </summary>
+    
+      <category term="개발" scheme="http://parkseokje.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
+    
+    
+      <category term="javascript" scheme="http://parkseokje.github.io/tags/javascript/"/>
+    
+      <category term="udemy" scheme="http://parkseokje.github.io/tags/udemy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Boolean and Existence, Default Values</title>
     <link href="http://parkseokje.github.io/2017/03/09/TheWeirdPartOfJavascript-1/"/>
     <id>http://parkseokje.github.io/2017/03/09/TheWeirdPartOfJavascript-1/</id>
     <published>2017-03-08T16:43:03.000Z</published>
-    <updated>2017-03-08T18:12:18.000Z</updated>
+    <updated>2017-03-09T15:36:27.000Z</updated>
     
     <summary type="html">
     
@@ -55,8 +78,6 @@
       <category term="개발" scheme="http://parkseokje.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
     
     
-      <category term="api" scheme="http://parkseokje.github.io/tags/api/"/>
-    
       <category term="passport" scheme="http://parkseokje.github.io/tags/passport/"/>
     
       <category term="jwt" scheme="http://parkseokje.github.io/tags/jwt/"/>
@@ -64,6 +85,8 @@
       <category term="nodejs" scheme="http://parkseokje.github.io/tags/nodejs/"/>
     
       <category term="expressjs" scheme="http://parkseokje.github.io/tags/expressjs/"/>
+    
+      <category term="api" scheme="http://parkseokje.github.io/tags/api/"/>
     
   </entry>
   
