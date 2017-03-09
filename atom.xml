@@ -78,6 +78,8 @@
       <category term="개발" scheme="http://parkseokje.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
     
     
+      <category term="api" scheme="http://parkseokje.github.io/tags/api/"/>
+    
       <category term="passport" scheme="http://parkseokje.github.io/tags/passport/"/>
     
       <category term="jwt" scheme="http://parkseokje.github.io/tags/jwt/"/>
@@ -85,8 +87,6 @@
       <category term="nodejs" scheme="http://parkseokje.github.io/tags/nodejs/"/>
     
       <category term="expressjs" scheme="http://parkseokje.github.io/tags/expressjs/"/>
-    
-      <category term="api" scheme="http://parkseokje.github.io/tags/api/"/>
     
   </entry>
   
