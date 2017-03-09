@@ -17,7 +17,7 @@
 <meta property="og:description" content="오늘은 Object 와 Fuction 에 대해 알아보자.
 우선, Object 에 대해 정의해보자.12345Objects are collections of name value pairs.객체는 이름과 값의 집합이다.And those values can be other collections of name value pairs.그리고 그 객체의 값들은 또 다른">
 <meta property="og:image" content="http://parkseokje.github.io/images/javascript.png">
-<meta property="og:updated_time" content="2017-03-09T16:21:08.000Z">
+<meta property="og:updated_time" content="2017-03-09T16:21:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Object and Function - 1">
 <meta name="twitter:description" content="오늘은 Object 와 Fuction 에 대해 알아보자.
@@ -181,7 +181,7 @@ ga('send', 'pageview');
 <p>그럼 객체를 생성하는 방법을 알아보자. 두 가지다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> person = &#123;&#125;; <span class="comment">// 객체 리터럴(Object Literals)</span></div></pre></td></tr></table></figure></p>
 <p><code>var person = {};</code>을 <strong>객체 리터럴</strong>(Object Literals) 형식이라고 한다.</p>
 <p>객체의 속성을 정의하는 방법도 두 가지다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">person[<span class="string">"name"</span>] = <span class="string">"Tony"</span>;</div><div class="line">person.name = <span class="string">"Tony"</span>;</div></pre></td></tr></table></figure></p>
-<p><code>person[&quot;firstname&quot;]</code> 의 경우 <strong>Computed Member Access</strong> 타입이라고 하며, brakets ([..]) 연산자가 사용된다.<br><code>person.firstname</code>의 경우 <strong>Member Access</strong> 타입이라고 하며, curly braces ({..}) 연산자가 사용된다.<br>둘의 차이점이라면 첫 번째의 경우 아래와 같이 <code>&quot;name&quot;</code> 대신 변수를 할당할 수 있다는 점이다.</p>
+<p><code>person[&quot;firstname&quot;]</code> 의 경우 <strong>Computed Member Access</strong> 타입이라고 하며, brakets ([..]) 연산자가 사용된다.<br><code>person.firstname</code>의 경우 <strong>Member Access</strong> 타입이라고 하며, curly braces ({..}) 연산자가 사용된다.<br>둘의 차이점이라면 첫 번째의 경우 아래와 같이 <code>&quot;firstname&quot;</code> 대신 <strong>변수</strong>(firstNameProperty)를 할당할 수 있다는 점이다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">person[<span class="string">"firstname"</span>] = <span class="string">"Tony"</span>;</div><div class="line"><span class="keyword">var</span> firstNameProperty = <span class="string">"firstname"</span>;</div><div class="line"><span class="built_in">console</span>.log(person[firstNameProperty]); <span class="comment">// output: "Tony"</span></div></pre></td></tr></table></figure>
 <p>위에서 객체(Object)는 객체를 <strong>속성</strong>(Property) 으로 둘 수 있다고 했다.<br>아래 코드를 함께 보자.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">person.address = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">person.address.street = <span class="string">"시루봉로"</span> <span class="comment">// person["address"]["street"] 와 동일</span></div><div class="line">person.address.dong = <span class="string">"방학동"</span></div><div class="line">person.address.gu = <span class="string">"도봉구"</span></div><div class="line">person.address.si = <span class="string">"서울시"</span></div><div class="line"></div><div class="line">또는 객체 리터럴(<span class="built_in">Object</span> Literals) 형태로 작성할 수 있다.</div><div class="line"></div><div class="line">person.address = &#123;&#125;;</div><div class="line">person.address: &#123;</div><div class="line">    <span class="attr">street</span>: <span class="string">"시루봉로"</span>,</div><div class="line">    <span class="attr">dong</span>: <span class="string">"방학동"</span>,</div><div class="line">    <span class="attr">gu</span>: <span class="string">"도봉구"</span>,</div><div class="line">    <span class="attr">si</span>: <span class="string">"서울시"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -196,7 +196,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://parkseokje.github.io/2017/03/10/objectAndFunction/" data-id="cj02lm8ne000aew6bguutajn7" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://parkseokje.github.io/2017/03/10/objectAndFunction/" data-id="cj02lppy2000add6bsu22ygij" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
