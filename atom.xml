@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://parkseokje.github.io/"/>
-  <updated>2017-03-09T16:21:50.000Z</updated>
+  <updated>2017-03-10T06:39:02.000Z</updated>
   <id>http://parkseokje.github.io/</id>
   
   <author>
@@ -16,11 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Object and Function - 1</title>
+    <title>Namespace</title>
+    <link href="http://parkseokje.github.io/2017/03/10/namespace/"/>
+    <id>http://parkseokje.github.io/2017/03/10/namespace/</id>
+    <published>2017-03-10T03:33:34.000Z</published>
+    <updated>2017-03-10T06:39:02.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;이번에 다루게 될 주제는 네임스페이스(Namespace) 이다.&lt;br&gt;한가지 예를 들어 보자.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;helloworld1.js&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;tabl
+    
+    </summary>
+    
+      <category term="개발" scheme="http://parkseokje.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
+    
+    
+      <category term="javascript" scheme="http://parkseokje.github.io/tags/javascript/"/>
+    
+      <category term="udemy" scheme="http://parkseokje.github.io/tags/udemy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Object and Function</title>
     <link href="http://parkseokje.github.io/2017/03/10/objectAndFunction/"/>
     <id>http://parkseokje.github.io/2017/03/10/objectAndFunction/</id>
     <published>2017-03-09T15:12:33.000Z</published>
-    <updated>2017-03-09T16:21:50.000Z</updated>
+    <updated>2017-03-10T03:33:20.000Z</updated>
     
     <summary type="html">
     
@@ -43,7 +66,7 @@
     <link href="http://parkseokje.github.io/2017/03/09/TheWeirdPartOfJavascript-1/"/>
     <id>http://parkseokje.github.io/2017/03/09/TheWeirdPartOfJavascript-1/</id>
     <published>2017-03-08T16:43:03.000Z</published>
-    <updated>2017-03-09T15:36:27.000Z</updated>
+    <updated>2017-03-10T03:04:51.000Z</updated>
     
     <summary type="html">
     
