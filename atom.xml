@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://parkseokje.github.io/"/>
-  <updated>2017-03-10T06:52:32.000Z</updated>
+  <updated>2017-03-15T06:00:03.000Z</updated>
   <id>http://parkseokje.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Big O</title>
+    <link href="http://parkseokje.github.io/2017/03/14/bigO/"/>
+    <id>http://parkseokje.github.io/2017/03/14/bigO/</id>
+    <published>2017-03-14T08:12:37.000Z</published>
+    <updated>2017-03-15T06:00:03.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;일반적으로 프로그램의 크기가 증가함에 따라 복잡도도 함께 증가한다.&lt;br&gt;효율적인 알고리즘은 이런 복잡도를 감소시킬 수 있으며, 프로그램의 성능을 상당부분 개선할 수 있다.&lt;br&gt;프로그램의 성능을 측정하는 방법 중 대표적으로 프로그램 실행 시의 
+    
+    </summary>
+    
+      <category term="개발" scheme="http://parkseokje.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
+    
+    
+      <category term="javascript" scheme="http://parkseokje.github.io/tags/javascript/"/>
+    
+      <category term="algorithm" scheme="http://parkseokje.github.io/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>Namespace</title>

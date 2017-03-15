@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>석제의 블로그</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="description" content="Big O | 석제의 블로그
+    
+    
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+
+    
+    
+    
+        
+    
+    
+        
+(function(i,">
+<meta property="og:type" content="website">
+<meta property="og:title" content="석제의 블로그">
+<meta property="og:url" content="http://parkseokje.github.io/images/Big O _ 석제의 블로그.html">
+<meta property="og:site_name" content="석제의 블로그">
+<meta property="og:description" content="Big O | 석제의 블로그
+    
+    
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+
+    
+    
+    
+        
+    
+    
+        
+(function(i,">
+<meta property="og:image" content="http://parkseokje.github.io/images/constant-time.png">
+<meta property="og:updated_time" content="2017-03-15T06:00:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="석제의 블로그">
+<meta name="twitter:description" content="Big O | 석제의 블로그
+    
+    
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+
+    
+    
+    
+        
+    
+    
+        
+(function(i,">
+<meta name="twitter:image" content="http://parkseokje.github.io/images/constant-time.png">
+    
+    <link rel="canonical" href="http://parkseokje.github.io/images/Big O _ 석제의 블로그.html"/>
+    
+        <link rel="alternate" href="/atom.xml" title="석제의 블로그" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/images/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-93247712-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">우주의 힘으로 개발하자</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">홈</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/개발/">개발</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/재테크/">재테크</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="https://about.me/seokjae">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    석제의 블로그
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Big O | 석제의 블로그</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="javascript,algorithm">
+    
+    <meta name="description" content="일반적으로 프로그램의 크기가 증가함에 따라 복잡도도 함께 증가한다.효율적인 알고리즘은 이런 복잡도를 감소시킬 수 있으며, 프로그램의 성능을 상당부분 개선할 수 있다.프로그램의 성능을 측정하는 방법 중 대표적으로 프로그램 실행 시의 CPU, RAM 사용량을 측정하는 방법이 있다.
+
+CPU 사용량을 측정한다 =&amp;gt; 시간 복잡도를 계산한다.
+RAM 사용량을">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Big O">
+<meta property="og:url" content="http://parkseokje.github.io/2017/03/14/bigO/index.html">
+<meta property="og:site_name" content="석제의 블로그">
+<meta property="og:description" content="일반적으로 프로그램의 크기가 증가함에 따라 복잡도도 함께 증가한다.효율적인 알고리즘은 이런 복잡도를 감소시킬 수 있으며, 프로그램의 성능을 상당부분 개선할 수 있다.프로그램의 성능을 측정하는 방법 중 대표적으로 프로그램 실행 시의 CPU, RAM 사용량을 측정하는 방법이 있다.
+
+CPU 사용량을 측정한다 =&amp;gt; 시간 복잡도를 계산한다.
+RAM 사용량을">
+<meta property="og:image" content="http://parkseokje.github.io/images/algorithm.jpg">
+<meta property="og:updated_time" content="2017-03-15T05:59:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Big O">
+<meta name="twitter:description" content="일반적으로 프로그램의 크기가 증가함에 따라 복잡도도 함께 증가한다.효율적인 알고리즘은 이런 복잡도를 감소시킬 수 있으며, 프로그램의 성능을 상당부분 개선할 수 있다.프로그램의 성능을 측정하는 방법 중 대표적으로 프로그램 실행 시의 CPU, RAM 사용량을 측정하는 방법이 있다.
+
+CPU 사용량을 측정한다 =&amp;gt; 시간 복잡도를 계산한다.
+RAM 사용량을">
+<meta name="twitter:image" content="http://parkseokje.github.io/images/algorithm.jpg">
+    
+    <link rel="canonical" href="http://parkseokje.github.io/2017/03/14/bigO/">
+    
+        <link rel="alternate" href="/atom.xml" title="석제의 블로그" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/images/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-93247712-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">우주의 힘으로 개발하자</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">홈</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/개발/">개발</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/재테크/">재테크</a></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="https://about.me/seokjae" target="_blank" rel="external">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/개발/">개발</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-bigO" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Big O
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2017/03/14/bigO/" class="article-date">
+    <time datetime="2017-03-14T08:12:37.000Z" itemprop="datePublished">2017-03-14</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>일반적으로 프로그램의 크기가 증가함에 따라 복잡도도 함께 증가한다.<br>효율적인 알고리즘은 이런 복잡도를 감소시킬 수 있으며, 프로그램의 성능을 상당부분 개선할 수 있다.<br>프로그램의 성능을 측정하는 방법 중 대표적으로 프로그램 실행 시의 CPU, RAM 사용량을 측정하는 방법이 있다.</p>
+<ul>
+<li><strong>CPU 사용량</strong>을 측정한다 =&gt; <strong>시간 복잡도</strong>를 계산한다.</li>
+<li><strong>RAM 사용량</strong>을 측정한다 =&gt; <strong>공간 복잡도</strong>를 계산한다.</li>
+</ul>
+<p>라고 정의할 수 있다.</p>
+<p>이번 포스트에서는 <a href="https://ko.wikipedia.org/wiki/%EC%8B%9C%EA%B0%84_%EB%B3%B5%EC%9E%A1%EB%8F%84" target="_blank" rel="external">시간 복잡도(Time Complexity)</a> 에 대해서만 알아본다.<br>시간 복잡도는 문제를 해결하는데 걸리는 시간과 입력의 함수 관계를 가리키며, 주로 <strong>빅오 표기법</strong>(Big O(rder) Notation) 으로 나타낼 수 있다.</p>
+<p>널리 알려진 알고리즘들의 성능을 빅오 표기법으로 했을 때 어떤 결과가 보여지는지 지금 즉시 확인하고 싶다면,<br><strong><a href="http://bigocheatsheet.com/" target="_blank" rel="external">Big-O Cheat Sheet</a></strong> 에서 아주 상세히 설명되어 있으니 확인해보기 바란다.</p>
+<p>상세한 설명에 들어가기 전에 다음 상황을 생각해보자.<br>여러 개의 숫자의 집합으로 이루어진 배열에서, 숫자들 간의 가장 큰 차이를 찾아야 하는 문제가 주어졌을 때, 아래와 같은 시나리오를 생각해볼 수 있다.</p>
+<h3 id="1-배열이-정렬되어-있을-경우"><a href="#1-배열이-정렬되어-있을-경우" class="headerlink" title="1. 배열이 정렬되어 있을 경우"></a>1. 배열이 정렬되어 있을 경우</h3><p>항상 첫번 째와 마지막 숫자를 비교하면 되므로 배열의 크기가 기하급수적으로 증가해도 세가지 연산만 수행하면 된다.</p>
+<ul>
+<li>첫번 째 값을 구한다: 1</li>
+<li>마지막 값을 구한다: 10</li>
+<li><strong>둘의 차이를 구한다: 10 - 1 = 9</strong><br>데이터가 증가해도 연산은 3번만 하면 되므로, 수행시간은 큰 변함이 없다. 이를 <strong>Constant Time Complexity</strong>(상수 시간 복잡도) 라고 한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">10</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">FindLargestNumber</span>(<span class="params">items</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> smallest = items[<span class="number">0</span>];</div><div class="line">  <span class="keyword">let</span> largest = items[items.length - <span class="number">1</span>];</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (largest - smallest);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 9 가 출력</span></div><div class="line"><span class="built_in">console</span>.log(FindLargestGap(numbers));</div></pre></td></tr></table></figure>
+<p><img src="/images/constant-time.png" alt=""><br>(t: 시간, n: 입력값의 크기)</p>
+<p><strong>복잡도</strong>(number of items, 대입값의 크기/개수)와는 상관없이 시간(iteration/the worst case time, 반복 회수/가장 오래걸리는 시간)은 일정하다.<br>또 다른 예제를 통해 알아보자.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> getLast = <span class="function">(<span class="params">items</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> items[items.length - <span class="number">1</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line">getLast([<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>]);</div><div class="line">=&gt; c (<span class="number">1</span> 번 반복)</div><div class="line"></div><div class="line">getLast([<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>]);</div><div class="line">=&gt; c (<span class="number">1</span> 번 반복)</div></pre></td></tr></table></figure>
+<h3 id="2-배열이-정렬되어-있지-않을-경우"><a href="#2-배열이-정렬되어-있지-않을-경우" class="headerlink" title="2. 배열이 정렬되어 있지 않을 경우"></a>2. 배열이 정렬되어 있지 않을 경우</h3><p>최소 및 최대값을 찾기 위해 배열의 모든 숫자를 탐색하여, 비교를 수행해야 한다.<br>이 경우 수행시간은 배열의 크기에 따라 늘어난다. 이를 <strong>Linear Time Complexity</strong>(선형 시간 복잡도) 라고 한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> numbers = [<span class="number">2</span>, <span class="number">10</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">10</span>, <span class="number">5</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">FindLargestGap</span>(<span class="params">items</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> smallest = items[<span class="number">0</span>];</div><div class="line">  <span class="keyword">let</span> largest = items[<span class="number">0</span>];</div><div class="line"></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; items.length; i++) &#123;</div><div class="line">    <span class="keyword">if</span> (items[i] &lt; smallest) &#123;</div><div class="line">      smallest = items[i]</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (items[i] &gt; largest) &#123;</div><div class="line">      largest = items[i];</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (largest - smallest);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 9 가 출력, 총 6번 의 반복이 수행</span></div><div class="line"><span class="built_in">console</span>.log(FindLargestNumber(numbers));</div></pre></td></tr></table></figure>
+<p><img src="/images/linear-time.png" alt=""><br>(t: 시간, n: 입력값의 크기)</p>
+<p>복잡도에 따라 반복회수도 증가한다. 다른 예제를 통해 알아보자.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 배열 items 로 부터 match 에 해당하는 값의 위치(index)를 찾는다.</span></div><div class="line"><span class="keyword">const</span> findIndex = <span class="function">(<span class="params">items, match</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; total = items.length; i &lt; total; i++) &#123;</div><div class="line">    <span class="keyword">if</span> (items[i] == match) &#123;</div><div class="line">      <span class="keyword">return</span> i;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> array= [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>];</div><div class="line">findIndex(array, <span class="string">"a"</span>);</div><div class="line">=&gt; <span class="number">0</span>  (<span class="number">1</span> 번 반복 - 가장 좋음)</div><div class="line">findIndex(array, <span class="string">"d"</span>);</div><div class="line">=&gt; <span class="number">3</span>  (<span class="number">4</span> 번 반복 - 가장 나쁨)</div><div class="line">findIndex(array, <span class="string">"e"</span>);</div><div class="line">=&gt; <span class="number">-1</span> (<span class="number">4</span> 번 반복 - 가장 나쁨)</div></pre></td></tr></table></figure>
+<h3 id="3-중첩-for-문을-사용할-경우"><a href="#3-중첩-for-문을-사용할-경우" class="headerlink" title="3. 중첩 for 문을 사용할 경우"></a>3. 중첩 for 문을 사용할 경우</h3><p>위 2번에 대해 중첩 for 문을 사용할 경우, 입력값 마다 처음부터 마지막까지 반복 비교를 수행한다.<br>이 경우 수행시간은 배열 크기의 2제곱 만큼 수행시간이 늘어난다. 이를 <strong>Quadratic Time Complexity</strong>(이차 시간 복잡도) 라고 한다.<br>이를 수식으로 표현하면, 배열의 크기를 <strong>n</strong> 이라고 했을 때, 수행시간은 <strong>n * n = n^2</strong> 가 된다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> numbers = [<span class="number">2</span>, <span class="number">10</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">10</span>, <span class="number">5</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">FindLargestGap</span> (<span class="params">items</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> gap; <span class="comment">// i번째 숫자와 j번째 숫자의 차이</span></div><div class="line">  <span class="keyword">let</span> maxGap = <span class="number">0</span>; <span class="comment">// i번째 숫자와 j번째 숫자의 차이 중 가장 큰 값</span></div><div class="line"></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; items.length; i++) &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; items.length; j++) &#123;</div><div class="line">      gap = items[i] - items[j];</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (gap &lt; <span class="number">0</span>) &#123;</div><div class="line">        gap = gap * <span class="number">-1</span>;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (gap &gt; maxGap) &#123;</div><div class="line">        maxGap = gap;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> maxGap;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 9 가 출력, 총 49 (7*7) 의 반복이 수행</span></div><div class="line"><span class="built_in">console</span>.log(FindLargestGap(numbers));</div></pre></td></tr></table></figure>
+<p><img src="/images/quadratic-time.png" alt=""><br>(t: 시간, n: 입력값의 크기)</p>
+<p>복잡도에 따라 반복 시간이 n의 2제곱으로 늘어난다. 다른 예제를 통해 알아보자.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> buildSquareMatrix = <span class="function">(<span class="params">items</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> matrix = [];</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; total = items.length; i &lt; total; i++) &#123;</div><div class="line">    matrix[i] = [];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; total = items.length; j &lt; total; j++) &#123;</div><div class="line">      matrix[i].push(items[j]);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">buildSquareMatrix([<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>]);</div><div class="line">=&gt; [</div><div class="line">   [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>],</div><div class="line">   [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>],</div><div class="line">   [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>]</div><div class="line">] (<span class="number">3</span>개의 아이템에 대하여, <span class="number">9</span> 반복 수행)</div></pre></td></tr></table></figure>
+<p>위 문제를 통해, 대표적으로 가장 많이 알려진 상수, 선형, 이차 시간 복잡도에 대해<br>개념을 잡아보았다.</p>
+<p>자 그럼 마지막으로 널리 알려진 정렬 알고리즘인 Binary Search(이진 검색) 에 대해 알아보고,<br>이진 검색이 가지는 시간 복잡도는 <strong>위와 어떻게 다른지</strong> 다음 예제를 통해 알아보자.</p>
+<p><strong>Binary Search(이진검색)</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> FindItemBinarySearch = <span class="function">(<span class="params">items, match</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> minIndex = <span class="number">0</span>;</div><div class="line">  <span class="keyword">let</span> maxIndex = item.length - <span class="number">1</span>;</div><div class="line">  <span class="keyword">let</span> currentIndex;</div><div class="line">  <span class="keyword">let</span> currentElement;</div><div class="line"></div><div class="line">  <span class="keyword">while</span> (minIndex &lt;= maxIndex) &#123;</div><div class="line">    currentIndex = (minIndex + maxIndex) / <span class="number">2</span>);</div><div class="line">    currentElement = items(currentIndex);</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (currentElement &lt; match) &#123;</div><div class="line">      minIndex = currentIndex + <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (currentIndex &gt; match) &#123;</div><div class="line">      maxIndex = currentIndex - <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">return</span> currentIndex;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> - <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> arr = [ <span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>, <span class="string">'q'</span>, <span class="string">'r'</span>, <span class="string">'s'</span>, <span class="string">'w'</span>, <span class="string">'x'</span>, <span class="string">'z'</span> ];</div><div class="line"><span class="built_in">console</span>.log(FindItemBinarySearch(arr, <span class="string">'s'</span>)); <span class="comment">// 7 을 출력</span></div></pre></td></tr></table></figure></p>
+<p>Binary Search 는 기본적으로는 <strong>Logarithmic-Time Complexity, O(log(n))</strong> (로그 시간 복잡도) 를 취하고 있다.</p>
+<p>입력값이 증가해도 수행 시간이 일정하다는 특징이 있다. 하지만 최악의 경우 선형 시간 복잡도(O(n))를 보이기도 한다. (<a href="http://bigocheatsheet.com/" target="_blank" rel="external">Big-O Cheat Sheet</a> 참고)</p>
+<p>for 문을 이용한 자료 탐색의 경우 n 만큼의 입력값이 있다면, n 의 모든 값들을 탐색해야 하므로, 입력값의 크기에 따라 시간이 증가한다는 문제가 있었다. (선형 시간 복잡도)<br>로그 시간 복잡도는 이를 절반, 또는 다시 절반의 절반으로 나누어 탐색하기 때문에, 상수 시간 복잡도 다음으로 가장 효율이 좋다고 말할 수 있다.</p>
+<p><img src="/images/logarithmic-time.png" alt=""><br>(t: 시간, n: 입력값의 크기)</p>
+<p>그림으로 요약해보자.</p>
+<p><img src="/images/all-time-complexities.png" alt=""></p>
+<p>다음 시간에는 널리 알려진 알고리즘들과<br>코딩 인터뷰에서 자주 등장하는 알고리즘 문제 풀이를 통해 시간 및 공간 복잡도를 좀 더 깊게 이해하는 시간을 가져보자.  </p>
+<p><strong>참고</strong></p>
+<p><a href="http://openparadigm.tistory.com/20" target="_blank" rel="external">빅오표기법/빅오분석법(Big O Notation</a><br><a href="http://egloos.zum.com/springmvc/v/562519" target="_blank" rel="external">좋은 알고리즘이란? / 빅오표기법</a><br><a href="http://www.bradoncode.com/blog/2012/04/big-o-algorithm-examples-in-javascript.html" target="_blank" rel="external">Big O Search Algorithms in JavasScript</a><br><a href="http://bigocheatsheet.com/" target="_blank" rel="external">Big O Notation in JavaScript</a><br><a href="http://skmagic.tistory.com/entry/%EC%8B%9C%EA%B0%84%EC%9D%98-%EB%B3%B5%EC%9E%A1%EB%8F%84-%EC%B4%9D%EC%A0%95%EB%A6%AC%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" target="_blank" rel="external">Time Complexity Analysis &amp; Why It’s Important</a></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://parkseokje.github.io/2017/03/14/bigO/" data-id="cj099jhzb00055p6bwhnq94no" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>팔로우:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/PSJ1407" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/seokjae.park.92" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/0/110593671217098784885" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/Parkseokje" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <div class="github-card" data-github="Parkseokje" data-width="340" data-height="" data-theme="medium"></div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/03/10/namespace/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">오래된</strong>
+        <p class="article-nav-title">Namespace</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/14/bigO/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/algorithm.jpg)" alt="Big O" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/14/bigO/" class="title">Big O</a></p>
+                            <p class="item-date"><time datetime="2017-03-14T08:12:37.000Z" itemprop="datePublished">2017-03-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/10/namespace/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/javascript.png)" alt="Namespace" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/10/namespace/" class="title">Namespace</a></p>
+                            <p class="item-date"><time datetime="2017-03-10T03:33:34.000Z" itemprop="datePublished">2017-03-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/10/objectAndFunction/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/javascript.png)" alt="Object and Function" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/10/objectAndFunction/" class="title">Object and Function</a></p>
+                            <p class="item-date"><time datetime="2017-03-09T15:12:33.000Z" itemprop="datePublished">2017-03-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/09/TheWeirdPartOfJavascript-1/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/javascript.png)" alt="Boolean and Existence, Default Values" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/09/TheWeirdPartOfJavascript-1/" class="title">Boolean and Existence, Default Values</a></p>
+                            <p class="item-date"><time datetime="2017-03-08T16:43:03.000Z" itemprop="datePublished">2017-03-09</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/07/jwt/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/tutorial.png)" alt="jwt" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/07/jwt/" class="title">jwt</a></p>
+                            <p class="item-date"><time datetime="2017-03-07T04:22:40.000Z" itemprop="datePublished">2017-03-07</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발/">개발</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/재테크/">재테크</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">아카이브</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">3월 2017</a><span class="archive-list-count">12</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">태그</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api/">api</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codereview/">codereview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/expressjs/">expressjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jwt/">jwt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/passport/">passport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/udemy/">udemy</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/부동산/">부동산</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/재태크/">재태크</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/api/" style="font-size: 15px;">api</a> <a href="/tags/codereview/" style="font-size: 10px;">codereview</a> <a href="/tags/expressjs/" style="font-size: 10px;">expressjs</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jwt/" style="font-size: 10px;">jwt</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/passport/" style="font-size: 10px;">passport</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/udemy/" style="font-size: 15px;">udemy</a> <a href="/tags/부동산/" style="font-size: 10px;">부동산</a> <a href="/tags/재태크/" style="font-size: 10px;">재태크</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;" target="_blank" rel="external"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Seokje Park</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'dev-blog-sjpark';
+    
+    
+    var disqus_url = 'http://parkseokje.github.io/2017/03/14/bigO/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://parkseokje.github.io/images/Big O _ 석제의 블로그.html" data-id="cj0ak5px400014n6bwu2jdqiq" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>팔로우:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/PSJ1407" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/seokjae.park.92" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/0/110593671217098784885" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/Parkseokje" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <div class="github-card" data-github="Parkseokje" data-width="340" data-height="" data-theme="medium"></div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/14/bigO/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/algorithm.jpg)" alt="Big O" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/14/bigO/" class="title">Big O</a></p>
+                            <p class="item-date"><time datetime="2017-03-14T08:12:37.000Z" itemprop="datePublished">2017-03-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/10/namespace/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/javascript.png)" alt="Namespace" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/10/namespace/" class="title">Namespace</a></p>
+                            <p class="item-date"><time datetime="2017-03-10T03:33:34.000Z" itemprop="datePublished">2017-03-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/10/objectAndFunction/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/javascript.png)" alt="Object and Function" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/10/objectAndFunction/" class="title">Object and Function</a></p>
+                            <p class="item-date"><time datetime="2017-03-09T15:12:33.000Z" itemprop="datePublished">2017-03-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/09/TheWeirdPartOfJavascript-1/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/javascript.png)" alt="Boolean and Existence, Default Values" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/09/TheWeirdPartOfJavascript-1/" class="title">Boolean and Existence, Default Values</a></p>
+                            <p class="item-date"><time datetime="2017-03-08T16:43:03.000Z" itemprop="datePublished">2017-03-09</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/07/jwt/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/tutorial.png)" alt="jwt" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
+                            <p class="item-title"><a href="/2017/03/07/jwt/" class="title">jwt</a></p>
+                            <p class="item-date"><time datetime="2017-03-07T04:22:40.000Z" itemprop="datePublished">2017-03-07</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/개발/">개발</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/재테크/">재테크</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">아카이브</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">3월 2017</a><span class="archive-list-count">12</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">태그</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api/">api</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codereview/">codereview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/expressjs/">expressjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jwt/">jwt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/passport/">passport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/udemy/">udemy</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/부동산/">부동산</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/재태크/">재태크</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/api/" style="font-size: 15px;">api</a> <a href="/tags/codereview/" style="font-size: 10px;">codereview</a> <a href="/tags/expressjs/" style="font-size: 10px;">expressjs</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jwt/" style="font-size: 10px;">jwt</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/passport/" style="font-size: 10px;">passport</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/udemy/" style="font-size: 15px;">udemy</a> <a href="/tags/부동산/" style="font-size: 10px;">부동산</a> <a href="/tags/재태크/" style="font-size: 10px;">재태크</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Seokje Park</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'dev-blog-sjpark';
+    
+    
+    var disqus_url = 'http://parkseokje.github.io/images/Big O _ 석제의 블로그.html';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
