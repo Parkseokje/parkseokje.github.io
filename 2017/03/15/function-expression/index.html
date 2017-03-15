@@ -3,37 +3,34 @@
 <head>
     <meta charset="utf-8">
     
-    <title>부동산 공부 | 석제의 블로그</title>
+    <title>Function Statement VS Function Expression | 석제의 블로그</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="부동산,재태크" />
+        <meta name="keywords" content="javascript,udemy" />
     
-    <meta name="description" content="부동산 경제학 (김정용 저)
-
-청약은 주택 수요가 많은 광역시나 지는 구도심보다는 떠오르는 신도심, 대규모 택지 개발 지구, 그동안 아파트 공급이 뜸해서 신규 주택 수요가 많은 지역부터 노리는 것이 좋다.
-발전 가능성이 높은 지역은 10년간 집값이 몇 배로 뛰기 때문에 이왕이면 이런 곳에 집을 마련하는 것이 재테크의 기본
-서울이라면 1가구 1주택으로 3년">
+    <meta name="description" content="JavaScript 에만 있는 Function 의 특징이 있다.바로 ‘1급 XX’ 라는 수식어가 붙는다는 것이다.
+1급 시민 (First Class Citizen)1급 객체 (First Class Object)1급 함수 (First Class Function)
+1급 시민
+변수(Variable), 인자(Parameter), 반환값(Return Value)으로">
 <meta property="og:type" content="article">
-<meta property="og:title" content="부동산 공부">
-<meta property="og:url" content="http://parkseokje.github.io/2017/03/07/realty/index.html">
+<meta property="og:title" content="Function Statement VS Function Expression">
+<meta property="og:url" content="http://parkseokje.github.io/2017/03/15/function-expression/index.html">
 <meta property="og:site_name" content="석제의 블로그">
-<meta property="og:description" content="부동산 경제학 (김정용 저)
-
-청약은 주택 수요가 많은 광역시나 지는 구도심보다는 떠오르는 신도심, 대규모 택지 개발 지구, 그동안 아파트 공급이 뜸해서 신규 주택 수요가 많은 지역부터 노리는 것이 좋다.
-발전 가능성이 높은 지역은 10년간 집값이 몇 배로 뛰기 때문에 이왕이면 이런 곳에 집을 마련하는 것이 재테크의 기본
-서울이라면 1가구 1주택으로 3년">
-<meta property="og:image" content="http://parkseokje.github.io/images/realty.png">
-<meta property="og:updated_time" content="2017-03-08T10:44:04.000Z">
+<meta property="og:description" content="JavaScript 에만 있는 Function 의 특징이 있다.바로 ‘1급 XX’ 라는 수식어가 붙는다는 것이다.
+1급 시민 (First Class Citizen)1급 객체 (First Class Object)1급 함수 (First Class Function)
+1급 시민
+변수(Variable), 인자(Parameter), 반환값(Return Value)으로">
+<meta property="og:image" content="http://parkseokje.github.io/images/javascript.png">
+<meta property="og:updated_time" content="2017-03-15T10:42:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="부동산 공부">
-<meta name="twitter:description" content="부동산 경제학 (김정용 저)
-
-청약은 주택 수요가 많은 광역시나 지는 구도심보다는 떠오르는 신도심, 대규모 택지 개발 지구, 그동안 아파트 공급이 뜸해서 신규 주택 수요가 많은 지역부터 노리는 것이 좋다.
-발전 가능성이 높은 지역은 10년간 집값이 몇 배로 뛰기 때문에 이왕이면 이런 곳에 집을 마련하는 것이 재테크의 기본
-서울이라면 1가구 1주택으로 3년">
-<meta name="twitter:image" content="http://parkseokje.github.io/images/realty.png">
+<meta name="twitter:title" content="Function Statement VS Function Expression">
+<meta name="twitter:description" content="JavaScript 에만 있는 Function 의 특징이 있다.바로 ‘1급 XX’ 라는 수식어가 붙는다는 것이다.
+1급 시민 (First Class Citizen)1급 객체 (First Class Object)1급 함수 (First Class Function)
+1급 시민
+변수(Variable), 인자(Parameter), 반환값(Return Value)으로">
+<meta name="twitter:image" content="http://parkseokje.github.io/images/javascript.png">
     
-    <link rel="canonical" href="http://parkseokje.github.io/2017/03/07/realty/"/>
+    <link rel="canonical" href="http://parkseokje.github.io/2017/03/15/function-expression/"/>
     
         <link rel="alternate" href="/atom.xml" title="석제의 블로그" type="application/atom+xml" />
     
@@ -153,18 +150,18 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/재테크/">재테크</a>
+    <a class="page-title-link" href="/categories/개발/">개발</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-realty" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-function-expression" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        부동산 공부
+        Function Statement VS Function Expression
         </h1>
     
 
@@ -172,23 +169,39 @@ ga('send', 'pageview');
         
         
             <div class="article-subtitle">
-                <a href="/2017/03/07/realty/" class="article-date">
-    <time datetime="2017-03-07T04:21:01.000Z" itemprop="datePublished">2017-03-07</time>
+                <a href="/2017/03/15/function-expression/" class="article-date">
+    <time datetime="2017-03-15T09:26:53.000Z" itemprop="datePublished">2017-03-15</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/부동산/">부동산</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/재태크/">재태크</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/udemy/">udemy</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><strong>부동산 경제학 (김정용 저)</strong></p>
+            <p>JavaScript 에만 있는 Function 의 특징이 있다.<br>바로 <strong>‘1급 XX’</strong> 라는 수식어가 붙는다는 것이다.</p>
+<p><strong>1급 시민</strong> (First Class Citizen)<br><strong>1급 객체</strong> (First Class Object)<br><strong>1급 함수</strong> (First Class Function)</p>
+<p><strong>1급 시민</strong></p>
+<p><u>변수(Variable), 인자(Parameter), 반환값(Return Value)</u>으로 전달할 수 있다.</p>
+<p><strong>1급 객체</strong><br>특정 언어에서 객체를 1급 시민으로 취급한다는 의미이다.</p>
+<p><strong>1급 함수</strong><br>1급 시민이면서, <u>추가적으로 런타임(Runtime)을 생성할 수 있으며, 익명(Anonymous)으로도 생성이 가능</u>하다.</p>
+<p>이번 시간에는 <strong>1급 함수</strong> 로서 JavaScript Function 의 특징에 대해 알아볼 것이다.</p>
+<p>Function 은 두 가지 형태로 분류할 수 있다.</p>
 <ul>
-<li>청약은 주택 수요가 많은 광역시나 지는 구도심보다는 떠오르는 신도심, 대규모 택지 개발 지구, 그동안 아파트 공급이 뜸해서 신규 주택 수요가 많은 지역부터 노리는 것이 좋다.</li>
-<li>발전 가능성이 높은 지역은 10년간 집값이 몇 배로 뛰기 때문에 이왕이면 이런 곳에 집을 마련하는 것이 재테크의 기본</li>
-<li>서울이라면 1가구 1주택으로 3년 이상의 보유 기간에 2년 거주를 해야 양도소득세가 비과세되지만 경기도(과천, 5대 신도시 제외)의 경우 3년간 보유만 하면 양도소득세가 면제되므로 투자 이익을 극대화할 수 있는 것</li>
-<li>아파트에 투자를 하려고 한다면 지방보다는 수도권에 투자하는 것이 좋다. 왜냐하면 향후 가격 상승면에서 지방보다는 서울, 수도권이 낫기 때문</li>
-<li>새 아파트를 매입하고 1년 이내에 비과세 요건을 충족한 기존 주택을 매도하면 양도소득세가 비과세되기 때문</li>
+<li>Function Statement: 함수 선언문</li>
+<li>Function Expression: 함수 표현식</li>
+</ul>
+<p><strong>Function Statement</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World!'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Function Expression</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> greetInKorean = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'안녕하세요!'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">logGreeting</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">  fn();</div><div class="line">&#125;</div><div class="line"></div><div class="line">logGreeting(greetInKorean); <span class="comment">// '안녕하세요' 출력</span></div></pre></td></tr></table></figure></p>
+<p><strong>Function Expression</strong> 이 바로 1급 시민의 특징을 고스란히 가지고 있다.<br>변수로, 인자로, 반환값으로 어딘가에 전달할 수가 있다.<br>그리고 var greetInKorean = <strong>function()</strong> 과 같은 익명(anonymous) 형태로도 작성할 수 있으므로 1급 함수이다.</p>
+<p>위에서 변수 <strong>greetInKorean</strong> 은 1급 시민을 가리키고 있으므로 본인 또한 1급 시민이 된다.<br>따라서 아래와 같이 실행할 수 있다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">greetInKorean(); <span class="comment">// '안녕하세요' 출력</span></div></pre></td></tr></table></figure></p>
+<p><strong>logGreeting</strong> 함수 또한 함수를 인자로 받을 수 있으므로 아래와 같이 실행이 가능하다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">logGreeting(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'안녕하세요!'</span>);</div><div class="line">&#125;)</div><div class="line"><span class="comment">// '안녕하세요' 출력</span></div></pre></td></tr></table></figure></p>
+<p>주의할 점은, <span style="color:red">Function Expression 의 경우 <strong>hoisting</strong> 이 안된다</span>는 점이다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">notHoisted(); <span class="comment">// TypeError: notHoisted is not a function</span></div><div class="line"><span class="keyword">var</span> notHoisted = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="built_in">console</span>.log(<span class="string">'bar'</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>참고로, 여기서 <strong>Expression</strong> 이란 특정 값으로 표현할 수 있는 코드 블록이라 할 수 있다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span> <span class="comment">// 1 출력</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="comment">// a =&gt; 1 출력</span></div><div class="line"><span class="keyword">var</span> b = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">'Hi'</span>); &#125; <span class="comment">// b =&gt; [Function: b] 출력</span></div></pre></td></tr></table></figure></p>
+<p><strong>참고</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function" target="_blank" rel="external">MDN Function</a></li>
+<li><a href="http://bestalign.github.io/2015/10/18/first-class-object" target="_blank" rel="external">bestalig’s dev blog</a></li>
 </ul>
 
         </div>
@@ -197,7 +210,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://parkseokje.github.io/2017/03/07/realty/" data-id="cj0au85yt000n0g6b3zo5rert" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://parkseokje.github.io/2017/03/15/function-expression/" data-id="cj0au85yl000b0g6bxgbm9mme" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -328,20 +341,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2017/03/07/swagger/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">새로운</strong>
-        <p class="article-nav-title">
-        
-            swagger
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/03/07/terminalTips/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/03/14/bigO/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">오래된</strong>
-        <p class="article-nav-title">Terminal Tips</p>
+        <p class="article-nav-title">Big O</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -528,7 +531,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'dev-blog-sjpark';
     
     
-    var disqus_url = 'http://parkseokje.github.io/2017/03/07/realty/';
+    var disqus_url = 'http://parkseokje.github.io/2017/03/15/function-expression/';
     
     (function() {
     var dsq = document.createElement('script');

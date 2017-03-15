@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://parkseokje.github.io/"/>
-  <updated>2017-03-15T06:11:14.000Z</updated>
+  <updated>2017-03-15T10:42:19.000Z</updated>
   <id>http://parkseokje.github.io/</id>
   
   <author>
@@ -16,11 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Function Statement VS Function Expression</title>
+    <link href="http://parkseokje.github.io/2017/03/15/function-expression/"/>
+    <id>http://parkseokje.github.io/2017/03/15/function-expression/</id>
+    <published>2017-03-15T09:26:53.000Z</published>
+    <updated>2017-03-15T10:42:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JavaScript 에만 있는 Function 의 특징이 있다.&lt;br&gt;바로 &lt;strong&gt;‘1급 XX’&lt;/strong&gt; 라는 수식어가 붙는다는 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1급 시민&lt;/strong&gt; (First Class Citizen)&lt;
+    
+    </summary>
+    
+      <category term="개발" scheme="http://parkseokje.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
+    
+    
+      <category term="javascript" scheme="http://parkseokje.github.io/tags/javascript/"/>
+    
+      <category term="udemy" scheme="http://parkseokje.github.io/tags/udemy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Big O</title>
     <link href="http://parkseokje.github.io/2017/03/14/bigO/"/>
     <id>http://parkseokje.github.io/2017/03/14/bigO/</id>
     <published>2017-03-14T08:12:37.000Z</published>
-    <updated>2017-03-15T06:11:14.000Z</updated>
+    <updated>2017-03-15T06:42:28.000Z</updated>
     
     <summary type="html">
     
@@ -31,9 +54,9 @@
       <category term="개발" scheme="http://parkseokje.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
     
     
-      <category term="algorithm" scheme="http://parkseokje.github.io/tags/algorithm/"/>
-    
       <category term="javascript" scheme="http://parkseokje.github.io/tags/javascript/"/>
+    
+      <category term="algorithm" scheme="http://parkseokje.github.io/tags/algorithm/"/>
     
   </entry>
   
