@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://parkseokje.github.io/"/>
-  <updated>2017-03-15T06:00:03.000Z</updated>
+  <updated>2017-03-15T06:04:23.000Z</updated>
   <id>http://parkseokje.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://parkseokje.github.io/2017/03/14/bigO/"/>
     <id>http://parkseokje.github.io/2017/03/14/bigO/</id>
     <published>2017-03-14T08:12:37.000Z</published>
-    <updated>2017-03-15T06:00:03.000Z</updated>
+    <updated>2017-03-15T06:04:23.000Z</updated>
     
     <summary type="html">
     
@@ -31,9 +31,9 @@
       <category term="개발" scheme="http://parkseokje.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
     
     
-      <category term="javascript" scheme="http://parkseokje.github.io/tags/javascript/"/>
-    
       <category term="algorithm" scheme="http://parkseokje.github.io/tags/algorithm/"/>
+    
+      <category term="javascript" scheme="http://parkseokje.github.io/tags/javascript/"/>
     
   </entry>
   
