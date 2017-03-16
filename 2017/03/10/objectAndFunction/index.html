@@ -17,7 +17,7 @@
 <meta property="og:description" content="오늘은 Object 와 Fuction 에 대해 알아보자.
 우선, Object 에 대해 정의해보자.12345Objects are collections of name value pairs.객체는 이름과 값의 집합이다.And those values can be other collections of name value pairs.그리고 그 객체의 값들은 또 다른">
 <meta property="og:image" content="http://parkseokje.github.io/images/javascript.png">
-<meta property="og:updated_time" content="2017-03-16T07:42:34.000Z">
+<meta property="og:updated_time" content="2017-03-16T07:56:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Object and Function">
 <meta name="twitter:description" content="오늘은 Object 와 Fuction 에 대해 알아보자.
@@ -195,7 +195,7 @@ ga('send', 'pageview');
 <p>와 같이 표현할 수 있다. 가급적 두번 째(객체 리터럴 형식) 방식을 권장한다. 권장하는 이유는 <code>가독성이 좋고 직관적으로 이해가 더 쉽기 때문</code>이다.<br>객체는 객체를 속성으로 가질 수 있다고 했다. 객체 리터럴 표기법에서는 {..} 의 중첩으로 표현한다. person 객체의 전체적인 모양은 아래와 같다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">person: &#123;</div><div class="line">    <span class="attr">firstname</span>: <span class="string">"Seokje"</span>,</div><div class="line">    <span class="attr">lastname</span>: <span class="string">"Park"</span>,</div><div class="line">    <span class="attr">address</span>: &#123;</div><div class="line">      <span class="attr">street</span>: <span class="string">"시루봉로"</span>,</div><div class="line">      <span class="attr">dong</span>: <span class="string">"방학동"</span>,</div><div class="line">      <span class="attr">gu</span>: <span class="string">"도봉구"</span>,</div><div class="line">      <span class="attr">si</span>: <span class="string">"서울시"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>뭐 이런 것도 가능하다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params">person</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Hi, '</span> + person.firstname);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// output: Hi, Seokje</span></div><div class="line">greet(&#123; <span class="attr">firstname</span>: <span class="string">'Seokje'</span>, <span class="attr">lastname</span>: <span class="string">'Park'</span> &#125;);</div></pre></td></tr></table></figure>
-<p>다음 시간에는 Function 에 대해 알아보자.</p>
+<p>다음 시간에는 <strong><a href="/2017/03/15/function-expression/" title="Function Statement VS Function Expression">Function Statement VS Function Expression</a></strong> 에 대해 알아보자.</p>
 
         </div>
         <footer class="article-footer">
@@ -203,7 +203,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://parkseokje.github.io/2017/03/10/objectAndFunction/" data-id="cj0c38x2d000dxq6bksyt3rqp" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://parkseokje.github.io/2017/03/10/objectAndFunction/" data-id="cj0c3wwq2000ddt6bw5jyialv" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
