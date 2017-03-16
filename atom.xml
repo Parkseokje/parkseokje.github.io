@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://parkseokje.github.io/"/>
-  <updated>2017-03-16T13:17:32.000Z</updated>
+  <updated>2017-03-16T13:25:16.000Z</updated>
   <id>http://parkseokje.github.io/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://parkseokje.github.io/2017/03/16/this/"/>
     <id>http://parkseokje.github.io/2017/03/16/this/</id>
     <published>2017-03-16T09:29:39.000Z</published>
-    <updated>2017-03-16T13:17:32.000Z</updated>
+    <updated>2017-03-16T13:25:16.000Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;이번 시간에는 &lt;strong&gt;this&lt;/strong&gt; 에 대해 알아보자.&lt;/p&gt;
-&lt;p&gt;보통 this 를 떠올리면,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/xTiTnfF8WezDlgl584/giphy.g
+&lt;p&gt;보통 this 를 떠올리면,&lt;br&gt;가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.&lt;/p&gt;
+&lt;p&gt;this 가 어디서 왔는지 알아가다 보
     
     </summary>
     

@@ -9,37 +9,25 @@
         <meta name="keywords" content="javascript,udemy" />
     
     <meta name="description" content="이번 시간에는 this 에 대해 알아보자.
-보통 this 를 떠올리면,
-
-가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.
-this 가 어디서 왔는지 알아가다 보면 Execution Context 라는 관문이 나온다.
-
-그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.
-Variable Object =&amp;gt; Scope Cha">
+보통 this 를 떠올리면,가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.
+this 가 어디서 왔는지 알아가다 보면 Execution Context 라는 관문이 나온다.그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.
+Variable Object =&amp;gt; Scope Chain =">
 <meta property="og:type" content="article">
 <meta property="og:title" content="this">
 <meta property="og:url" content="http://parkseokje.github.io/2017/03/16/this/index.html">
 <meta property="og:site_name" content="석제의 블로그">
 <meta property="og:description" content="이번 시간에는 this 에 대해 알아보자.
-보통 this 를 떠올리면,
-
-가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.
-this 가 어디서 왔는지 알아가다 보면 Execution Context 라는 관문이 나온다.
-
-그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.
-Variable Object =&amp;gt; Scope Cha">
+보통 this 를 떠올리면,가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.
+this 가 어디서 왔는지 알아가다 보면 Execution Context 라는 관문이 나온다.그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.
+Variable Object =&amp;gt; Scope Chain =">
 <meta property="og:image" content="http://parkseokje.github.io/images/javascript.png">
-<meta property="og:updated_time" content="2017-03-16T13:17:32.000Z">
+<meta property="og:updated_time" content="2017-03-16T13:25:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this">
 <meta name="twitter:description" content="이번 시간에는 this 에 대해 알아보자.
-보통 this 를 떠올리면,
-
-가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.
-this 가 어디서 왔는지 알아가다 보면 Execution Context 라는 관문이 나온다.
-
-그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.
-Variable Object =&amp;gt; Scope Cha">
+보통 this 를 떠올리면,가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.
+this 가 어디서 왔는지 알아가다 보면 Execution Context 라는 관문이 나온다.그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.
+Variable Object =&amp;gt; Scope Chain =">
 <meta name="twitter:image" content="http://parkseokje.github.io/images/javascript.png">
     
     <link rel="canonical" href="http://parkseokje.github.io/2017/03/16/this/"/>
@@ -199,18 +187,12 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
             <p>이번 시간에는 <strong>this</strong> 에 대해 알아보자.</p>
-<p>보통 this 를 떠올리면,</p>
-<p><img src="https://media.giphy.com/media/xTiTnfF8WezDlgl584/giphy.gif" alt="giphy.com"></p>
-<p>가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.</p>
-<p>this 가 어디서 왔는지 알아가다 보면 <strong>Execution Context</strong> 라는 관문이 나온다.</p>
-<p><img src="https://media.giphy.com/media/Rt23MIHkCJwdy/giphy.gif" alt="giphy.com"></p>
-<p>그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.</p>
+<p>보통 this 를 떠올리면,<br>가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.</p>
+<p>this 가 어디서 왔는지 알아가다 보면 <strong>Execution Context</strong> 라는 관문이 나온다.<br>그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.</p>
 <p><strong>Variable Object</strong> =&gt; <strong>Scope Chain</strong> =&gt; <strong>Variable Instantiation</strong> =&gt; <strong>this value</strong> =&gt; <strong>Execution</strong> ..</p>
-<p><img src="https://media.giphy.com/media/dARUXSVNXc5Da/giphy.gif" alt="giphy.com"></p>
 <p>차근차근 하나씩 짚어보자. 이제 소개할 내용은 <a href="http://poiemaweb.com/js-execution-context" target="_blank" rel="external">자바스크립트의 동작원리</a> 를 요약 정리한 것이다.</p>
 <h2 id="Execution-Context-EC"><a href="#Execution-Context-EC" class="headerlink" title="Execution Context (EC)"></a>Execution Context (EC)</h2><p>EC는 추상적으로 예기하면, 코드가 실행(Execution)되는 영역(Context)이다.<br>EC는 <strong>Global Execution Context (GEC)</strong> 와 <strong>Function Execution Context (FEC)</strong> 로 나누어진다.<br>GEC 는 쉽게 말해 브라우저 탭을 열 때 마다 하나씩만 생성되며,<br>FEC 는 함수가 실행될 때 생성된다. GEC 는 여러 FEC 를 둘 수 있다.</p>
 <p>EC 는 결국 object 라고할 수 있다. GEC 가 부모 객체이며, FEC 는 GEC의 자식 객체인 것이다.<br>근데 각 GEC/FEC 마다 숨겨놓은 자식들이 더 있다.. <s>설마 바람피운건 아니겠지</s></p>
-<p><img src="https://media.giphy.com/media/glmRyiSI3v5E4/giphy.gif" alt="giphy.com"></p>
 <p>그 자식들은 바로 아래 3명이다.</p>
 <ul>
 <li><strong>Variable Object</strong></li>
@@ -220,7 +202,6 @@ ga('send', 'pageview');
 <p><strong>Variable Object (VO)</strong><br>VO 는 변수, 매개변수, 인수, 함수 선언을 가진다. (함수 Expression 은 제외)</p>
 <p><strong>Scope Chain (SC)</strong><br>SC 는 상위 컨텍스트(GEC/FEC)에 대한 변수에 접근하기 위한 목적으로 VO 에 대한 참조를 차례대로 정돈하여 가지고 있다.</p>
 <p><strong>this value</strong><br>(오늘의 주인공) this value 는 GEC/FEC 를 <strong>소유</strong>하고 있는 객체를 <strong>참조하는 변수</strong>이다.<br>window (global object) 객체는 GEC를 포함하므로 GEC의 this value는 window 를 참조하게 된다.</p>
-<p><img src="https://media.giphy.com/media/xT77XWum9yH7zNkFW0/giphy.gif" alt="giphy.com"></p>
 <p>이제 코드로 확인해보자</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// this 는 window 를 참조한다.</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span> === <span class="built_in">window</span>); <span class="comment">// 출력: true</span></div><div class="line"></div><div class="line"><span class="keyword">this</span>.a = <span class="string">'hello'</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a) <span class="comment">// 출력 hello</span></div></pre></td></tr></table></figure>
 <p>근데 strict mode (<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode" target="_blank" rel="external">MDN - strict</a>) 에서는</p>
@@ -235,10 +216,9 @@ ga('send', 'pageview');
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">  <span class="attr">p</span>: <span class="string">'Hello!'</span>,</div><div class="line">  <span class="attr">f</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">var</span> change_p = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">      self.p = value;</div><div class="line">    &#125;</div><div class="line">    change_p(<span class="string">'Halo!'</span>);</div><div class="line">    <span class="keyword">return</span> self;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(o.f()); <span class="comment">// 출력: Halo!</span></div></pre></td></tr></table></figure>
 <p>이렇게 피해갈 수는 있다. this 를 SC의 상위 변수(self)에다 미리 담는 방법이 있다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">  <span class="attr">p</span>: <span class="string">'Hello!'</span>,</div><div class="line">  <span class="attr">f</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.change_p(<span class="string">'Halo!'</span>);</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">change_p</span>: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.p = value;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(o.f()); <span class="comment">// 출력: Halo!</span></div></pre></td></tr></table></figure></p>
 <p>옹? 또 이렇게는 된다. 흠.. 정말 궁금하지만, 또 다른 관문이 열릴 수도 있으므로 이 문제는 일단 여기서 일단락 짓자.</p>
-<p><img src="https://media.giphy.com/media/l0MYSiQPbNeLyZJZK/giphy.gif" alt="giphy.com"></p>
 <p><strong>생성자 함수에서의 this</strong><br>함수가 new 키워드와 함께 생성자로서 사용될 때 이 함수내 this 는 새롭게 생성된 객체에 연결된다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.p = <span class="string">'Hello'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> c();</div><div class="line"><span class="built_in">console</span>.log(o.p); <span class="comment">// 출력: Hello</span></div></pre></td></tr></table></figure>
-<p>어려운 내용을 쉽게 푸는게 더 어렵다는 누군가의 말이 생각나서<br>다소 예능(?) 스럽게 작성해보았다. <s>재미는 있네</s> </p>
+<p>어려운 내용을 쉽게 푸는게 더 어렵다는 누군가의 말이 생각나서<br>다소 예능(?) 스럽게 작성해보았다. <s>재미는 있네</s></p>
 <p><strong>참고</strong></p>
 <ul>
 <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this" target="_blank" rel="external">MDN - this</a></li>
@@ -251,7 +231,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://parkseokje.github.io/2017/03/16/this/" data-id="cj0cf7sin000wkq6bhopp6qu2" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://parkseokje.github.io/2017/03/16/this/" data-id="cj0cfhjd1000w6w6boi69163a" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
