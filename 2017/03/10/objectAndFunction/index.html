@@ -17,7 +17,7 @@
 <meta property="og:description" content="오늘은 Object 와 Fuction 에 대해 알아보자.
 우선, Object 에 대해 정의해보자.12345Objects are collections of name value pairs.객체는 이름과 값의 집합이다.And those values can be other collections of name value pairs.그리고 그 객체의 값들은 또 다른">
 <meta property="og:image" content="http://parkseokje.github.io/images/javascript.png">
-<meta property="og:updated_time" content="2017-03-10T03:33:20.000Z">
+<meta property="og:updated_time" content="2017-03-16T07:42:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Object and Function">
 <meta name="twitter:description" content="오늘은 Object 와 Fuction 에 대해 알아보자.
@@ -184,7 +184,7 @@ ga('send', 'pageview');
 <p>우선, Object 에 대해 정의해보자.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Objects are collections of name value pairs.</div><div class="line">객체는 이름과 값의 집합이다.</div><div class="line"></div><div class="line">And those values can be other collections of name value pairs.</div><div class="line">그리고 그 객체의 값들은 또 다른 이름과 값의 집합이 될 수 있다.</div></pre></td></tr></table></figure></p>
 <p>그렇다면, 위에서 예기하는 <strong>값</strong>이란 무엇일까?<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Primitive   &quot;property&quot;</div><div class="line">Object      &quot;property&quot;</div><div class="line">Fuctnion    &quot;method&quot;</div></pre></td></tr></table></figure></p>
 <p>객체의 값이 Primitive 타입일 경우 <strong>속성</strong>(property)이라고 하며, String, Boolean, Number 등과 같은 기본 타입을 일컫는다. 이에 대한 자세한 설명은 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures" target="_blank" rel="external">이곳</a>을 참고하길 바란다.<br>객체의 값이 자신과 같은 Object 타입일 경우에 역시 속성이라고 하며, <code>객체의 값들은 또 다른 이름과 값의 집합</code> 이라는 위의 설명과 같다.<br>근데, Function (함수) 는 <strong>메소드</strong>(method, 객체 안에 정의되어 있을 경우) 라고 한다.</p>
-<p>Primitive, Object, Function 은 메모리상에 각각의 주소들을 가지고 있으며, 이를 감싸고 있는 객체는 이들의 메모리 주소를 참조하고 있다. </p>
+<p>Primitive, Object, Function 은 메모리상에 각각의 주소들을 가지고 있으며, 이를 감싸고 있는 객체는 이들의 메모리 주소를 참조하고 있다.</p>
 <p>그럼 객체를 생성하는 방법을 알아보자. 두 가지다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> person = &#123;&#125;; <span class="comment">// 객체 리터럴(Object Literals)</span></div></pre></td></tr></table></figure></p>
 <p><code>var person = {};</code>을 <strong>객체 리터럴</strong>(Object Literals) 형식이라고 한다.</p>
 <p>객체의 속성을 정의하는 방법도 두 가지다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">person[<span class="string">"name"</span>] = <span class="string">"Tony"</span>;</div><div class="line">person.name = <span class="string">"Tony"</span>;</div></pre></td></tr></table></figure></p>
@@ -203,7 +203,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://parkseokje.github.io/2017/03/10/objectAndFunction/" data-id="cj0byvns0000org6b90cc3jbc" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://parkseokje.github.io/2017/03/10/objectAndFunction/" data-id="cj0c38x2d000dxq6bksyt3rqp" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -366,6 +366,26 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2017/03/16/json/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/javascript.png)" alt="JSON" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/03/16/json/" class="title">JSON</a></p>
+                            <p class="item-date"><time datetime="2017-03-16T06:24:13.000Z" itemprop="datePublished">2017-03-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2017/03/15/function-expression/" class="thumbnail">
     
     
@@ -443,26 +463,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/03/09/TheWeirdPartOfJavascript-1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/javascript.png)" alt="Boolean and Existence, Default Values" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/개발/">개발</a></p>
-                            <p class="item-title"><a href="/2017/03/09/TheWeirdPartOfJavascript-1/" class="title">Boolean and Existence, Default Values</a></p>
-                            <p class="item-date"><time datetime="2017-03-08T16:43:03.000Z" itemprop="datePublished">2017-03-09</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -482,7 +482,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">아카이브</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">3월 2017</a><span class="archive-list-count">13</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">3월 2017</a><span class="archive-list-count">14</span></li></ul>
         </div>
     </div>
 
@@ -492,7 +492,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">태그</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api/">api</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codereview/">codereview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/expressjs/">expressjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jwt/">jwt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/passport/">passport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/udemy/">udemy</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/부동산/">부동산</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/재태크/">재태크</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api/">api</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codereview/">codereview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/expressjs/">expressjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jwt/">jwt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/passport/">passport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/udemy/">udemy</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/부동산/">부동산</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/재태크/">재태크</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
