@@ -3,31 +3,46 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Object and Function | 석제의 블로그</title>
+    <title>this | 석제의 블로그</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="javascript,udemy" />
     
-    <meta name="description" content="오늘은 Object 와 Fuction 에 대해 알아보자.
-우선, Object 에 대해 정의해보자.Objects are collections of name value pairs. And those values can be other collections of name value pairs.
-객체는 이름과 값의 집합이다. 그리고 그 객체의 값들은 또 다른 이름">
+    <meta name="description" content="이번 시간에는 this 에 대해 알아보자.
+보통 this 를 떠올리면,
+
+가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.
+this 가 어디서 왔는지 알아가다 보면 Execution Context 라는 관문이 나온다.
+
+그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.
+Variable Object =&amp;gt; Scope Cha">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Object and Function">
-<meta property="og:url" content="http://parkseokje.github.io/2017/03/10/objectAndFunction/index.html">
+<meta property="og:title" content="this">
+<meta property="og:url" content="http://parkseokje.github.io/2017/03/16/this/index.html">
 <meta property="og:site_name" content="석제의 블로그">
-<meta property="og:description" content="오늘은 Object 와 Fuction 에 대해 알아보자.
-우선, Object 에 대해 정의해보자.Objects are collections of name value pairs. And those values can be other collections of name value pairs.
-객체는 이름과 값의 집합이다. 그리고 그 객체의 값들은 또 다른 이름">
+<meta property="og:description" content="이번 시간에는 this 에 대해 알아보자.
+보통 this 를 떠올리면,
+
+가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.
+this 가 어디서 왔는지 알아가다 보면 Execution Context 라는 관문이 나온다.
+
+그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.
+Variable Object =&amp;gt; Scope Cha">
 <meta property="og:image" content="http://parkseokje.github.io/images/javascript.png">
-<meta property="og:updated_time" content="2017-03-16T09:01:40.000Z">
+<meta property="og:updated_time" content="2017-03-16T13:17:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Object and Function">
-<meta name="twitter:description" content="오늘은 Object 와 Fuction 에 대해 알아보자.
-우선, Object 에 대해 정의해보자.Objects are collections of name value pairs. And those values can be other collections of name value pairs.
-객체는 이름과 값의 집합이다. 그리고 그 객체의 값들은 또 다른 이름">
+<meta name="twitter:title" content="this">
+<meta name="twitter:description" content="이번 시간에는 this 에 대해 알아보자.
+보통 this 를 떠올리면,
+
+가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.
+this 가 어디서 왔는지 알아가다 보면 Execution Context 라는 관문이 나온다.
+
+그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.
+Variable Object =&amp;gt; Scope Cha">
 <meta name="twitter:image" content="http://parkseokje.github.io/images/javascript.png">
     
-    <link rel="canonical" href="http://parkseokje.github.io/2017/03/10/objectAndFunction/"/>
+    <link rel="canonical" href="http://parkseokje.github.io/2017/03/16/this/"/>
     
         <link rel="alternate" href="/atom.xml" title="석제의 블로그" type="application/atom+xml" />
     
@@ -158,14 +173,14 @@ ga('send', 'pageview');
     enable_page_level_ads: true
   });
 </script>
-                            <article id="post-objectAndFunction" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-this" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Object and Function
+        this
         </h1>
     
 
@@ -173,8 +188,8 @@ ga('send', 'pageview');
         
         
             <div class="article-subtitle">
-                <a href="/2017/03/10/objectAndFunction/" class="article-date">
-    <time datetime="2017-03-09T15:12:33.000Z" itemprop="datePublished">2017-03-10</time>
+                <a href="/2017/03/16/this/" class="article-date">
+    <time datetime="2017-03-16T09:29:39.000Z" itemprop="datePublished">2017-03-16</time>
 </a>
                 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/udemy/">udemy</a></li></ul>
@@ -183,31 +198,52 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>오늘은 Object 와 Fuction 에 대해 알아보자.</p>
-<p>우선, Object 에 대해 정의해보자.<br><blockquote><p>Objects are collections of name value pairs. And those values can be other collections of name value pairs.</p>
-<p>객체는 이름과 값의 집합이다. 그리고 그 객체의 값들은 또 다른 이름과 값의 집합이 될 수 있다.</p>
-</blockquote></p>
-<p>그렇다면, 위에서 예기하는 <strong>값</strong>이란 무엇일까?<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Primitive   &quot;property&quot;</div><div class="line">Object      &quot;property&quot;</div><div class="line">Fuctnion    &quot;method&quot;</div></pre></td></tr></table></figure></p>
-<p>객체의 값이 Primitive 타입일 경우 <strong>속성</strong>(property)이라고 하며, String, Boolean, Number 등과 같은 기본 타입을 일컫는다. 이에 대한 자세한 설명은 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures" target="_blank" rel="external">이곳</a>을 참고하길 바란다.<br>객체의 값이 자신과 같은 Object 타입일 경우에 역시 속성이라고 하며, <strong>객체의 값들은 또 다른 이름과 값의 집합</strong> 이라는 위의 설명과 같다.<br>근데, Function (함수) 는 <strong>메소드</strong>(method, 객체 안에 정의되어 있을 경우) 라고 한다.</p>
-<p>Primitive, Object, Function 은 메모리상에 각각의 주소들을 가지고 있으며, 이를 감싸고 있는 객체는 이들의 메모리 주소를 참조하고 있다.</p>
-<p>그럼 객체를 생성하는 방법을 알아보자. 두 가지다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> person = &#123;&#125;; <span class="comment">// 객체 리터럴(Object Literals)</span></div></pre></td></tr></table></figure></p>
-<p><strong>var person = {};</strong>을 <strong>객체 리터럴</strong>(Object Literals) 형식이라고 한다.</p>
-<p>객체의 속성을 정의하는 방법도 두 가지다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">person[<span class="string">"name"</span>] = <span class="string">"Tony"</span>;</div><div class="line">person.name = <span class="string">"Tony"</span>;</div></pre></td></tr></table></figure></p>
-<p><strong>person[“firstname”]</strong> 의 경우 <strong>Computed Member Access</strong> 타입이라고 하며, brakets ([..]) 연산자가 사용된다.<br><strong>person.firstname</strong>의 경우 <strong>Member Access</strong> 타입이라고 하며, curly braces ({..}) 연산자가 사용된다.<br>둘의 차이점이라면 첫 번째의 경우 아래와 같이 <strong>“firstname”</strong> 대신 <strong>변수</strong>(firstNameProperty)를 할당할 수 있다는 점이다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">person[<span class="string">"firstname"</span>] = <span class="string">"Tony"</span>;</div><div class="line"><span class="keyword">var</span> firstNameProperty = <span class="string">"firstname"</span>;</div><div class="line"><span class="built_in">console</span>.log(person[firstNameProperty]); <span class="comment">// output: "Tony"</span></div></pre></td></tr></table></figure>
-<p>위에서 객체(Object)는 객체를 <strong>속성</strong>(Property) 으로 둘 수 있다고 했다.<br>아래 코드를 함께 보자.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">person.address = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">person.address.street = <span class="string">"시루봉로"</span> <span class="comment">// person["address"]["street"] 와 동일</span></div><div class="line">person.address.dong = <span class="string">"방학동"</span></div><div class="line">person.address.gu = <span class="string">"도봉구"</span></div><div class="line">person.address.si = <span class="string">"서울시"</span></div><div class="line"></div><div class="line">또는 객체 리터럴(<span class="built_in">Object</span> Literals) 형태로 작성할 수 있다.</div><div class="line"></div><div class="line">person.address = &#123;&#125;;</div><div class="line">person.address: &#123;</div><div class="line">    <span class="attr">street</span>: <span class="string">"시루봉로"</span>,</div><div class="line">    <span class="attr">dong</span>: <span class="string">"방학동"</span>,</div><div class="line">    <span class="attr">gu</span>: <span class="string">"도봉구"</span>,</div><div class="line">    <span class="attr">si</span>: <span class="string">"서울시"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>와 같이 표현할 수 있다. 가급적 두번 째(객체 리터럴 형식) 방식을 권장한다. 권장하는 이유는 <strong>가독성이 좋고 직관적으로 이해가 더 쉽기 때문</strong>이다.<br>객체는 객체를 속성으로 가질 수 있다고 했다. 객체 리터럴 표기법에서는 {..} 의 중첩으로 표현한다. person 객체의 전체적인 모양은 아래와 같다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">person: &#123;</div><div class="line">    <span class="attr">firstname</span>: <span class="string">"Seokje"</span>,</div><div class="line">    <span class="attr">lastname</span>: <span class="string">"Park"</span>,</div><div class="line">    <span class="attr">address</span>: &#123;</div><div class="line">      <span class="attr">street</span>: <span class="string">"시루봉로"</span>,</div><div class="line">      <span class="attr">dong</span>: <span class="string">"방학동"</span>,</div><div class="line">      <span class="attr">gu</span>: <span class="string">"도봉구"</span>,</div><div class="line">      <span class="attr">si</span>: <span class="string">"서울시"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>뭐 이런 것도 가능하다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params">person</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Hi, '</span> + person.firstname);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// output: Hi, Seokje</span></div><div class="line">greet(&#123; <span class="attr">firstname</span>: <span class="string">'Seokje'</span>, <span class="attr">lastname</span>: <span class="string">'Park'</span> &#125;);</div></pre></td></tr></table></figure>
-<h2 id="By-Value-amp-By-Reference"><a href="#By-Value-amp-By-Reference" class="headerlink" title="By Value &amp; By Reference"></a>By Value &amp; By Reference</h2><p>객체를 다른 변수에 대입하면, <strong>Copied By Reference</strong> (참조에 의한 복사) 가 일어난다.<br>원시(Primitive) 타입의 변수를 다른 변수에 대입하면, <strong>Copied By Value</strong> (값에 의한 복사) 가 일어난다.</p>
-<p>다음 예제를 보자.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// (Copied) By Reference</span></div><div class="line"><span class="keyword">var</span> a = &#123; <span class="attr">firstname</span>: <span class="string">'Seokje'</span>, <span class="attr">lastname</span>: <span class="string">'Park'</span> &#125;;</div><div class="line"><span class="keyword">var</span> b = a; <span class="comment">// a의 메모리 주소가 b로 복사된다 =&gt; a, b 메모리 주소가 같다.</span></div><div class="line"></div><div class="line">a.firstname = <span class="string">'whatever'</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 출력: &#123; firstname: 'whatever', lastname: 'Park' &#125;</span></div><div class="line"></div><div class="line"><span class="comment">// (Copied) By Value</span></div><div class="line"><span class="keyword">var</span> c = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> d = c; <span class="comment">// c 의값이 d로 복사된다 =&gt; c, d 의 메모리 주소가 다르다.</span></div><div class="line"></div><div class="line">c = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// 출력: 1</span></div></pre></td></tr></table></figure>
-<p>그렇다면, 함수에 객체를 전달하는 경우 어떻게 되는지 알아보자.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123; <span class="attr">firstname</span>: <span class="string">'Seokje'</span>, <span class="attr">lastname</span>: <span class="string">'Park'</span> &#125;;</div><div class="line"><span class="keyword">var</span> b = a;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">change</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line"> obj.firstname = <span class="string">'whatever'</span>;</div><div class="line">&#125;</div><div class="line">change(b);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 출력: &#123; firstname: 'whatever', lastname: 'Park' &#125;</span></div></pre></td></tr></table></figure></p>
-<p>함수에 객체를 전달하는 경우에도 (Copied)<strong>By Reference</strong> 가 일어난다.<br><strong>obj = b</strong> 와 동일하다.</p>
-<p><span style="color:red">하지만 아래와 같이 새로운 객체를 할당하는 경우,</span></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123; <span class="attr">firstname</span>: <span class="string">'Seokje'</span>, <span class="attr">lastname</span>: <span class="string">'Park'</span> &#125;;</div><div class="line"><span class="keyword">var</span> b = a;</div><div class="line"></div><div class="line">a = &#123; <span class="attr">firstname</span>: <span class="string">'Tom'</span>, <span class="attr">lastname</span>: <span class="string">'Johnson'</span> &#125;; <span class="comment">// &lt;== 새로운 객체 할당</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 출력: &#123; firstname: 'Tom', lastname: 'Johnson' &#125;</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 출력: &#123; firstname: 'Seokje', lastname: 'Park' &#125;</span></div></pre></td></tr></table></figure>
-<p>즉, a 에 <strong>기존에 없던</strong> 객체가 입력되면, 새로운 저장 공간(메모리 주소)이 생성되어, 동일한<br>메모리 주소를 참조하고 있던 b 와의 관계는 끊어지는 것을 볼 수 있다.</p>
+            <p>이번 시간에는 <strong>this</strong> 에 대해 알아보자.</p>
+<p>보통 this 를 떠올리면,</p>
+<p><img src="https://media.giphy.com/media/xTiTnfF8WezDlgl584/giphy.gif" alt="giphy.com"></p>
+<p>가끔 this 가 어디서 왔는지, 어디로 가는지 혼동될 때가 너무나 많다.</p>
+<p>this 가 어디서 왔는지 알아가다 보면 <strong>Execution Context</strong> 라는 관문이 나온다.</p>
+<p><img src="https://media.giphy.com/media/Rt23MIHkCJwdy/giphy.gif" alt="giphy.com"></p>
+<p>그 관문을 통과하면, 다른 관문들을 줄지어 만나게 된다.</p>
+<p><strong>Variable Object</strong> =&gt; <strong>Scope Chain</strong> =&gt; <strong>Variable Instantiation</strong> =&gt; <strong>this value</strong> =&gt; <strong>Execution</strong> ..</p>
+<p><img src="https://media.giphy.com/media/dARUXSVNXc5Da/giphy.gif" alt="giphy.com"></p>
+<p>차근차근 하나씩 짚어보자. 이제 소개할 내용은 <a href="http://poiemaweb.com/js-execution-context" target="_blank" rel="external">자바스크립트의 동작원리</a> 를 요약 정리한 것이다.</p>
+<h2 id="Execution-Context-EC"><a href="#Execution-Context-EC" class="headerlink" title="Execution Context (EC)"></a>Execution Context (EC)</h2><p>EC는 추상적으로 예기하면, 코드가 실행(Execution)되는 영역(Context)이다.<br>EC는 <strong>Global Execution Context (GEC)</strong> 와 <strong>Function Execution Context (FEC)</strong> 로 나누어진다.<br>GEC 는 쉽게 말해 브라우저 탭을 열 때 마다 하나씩만 생성되며,<br>FEC 는 함수가 실행될 때 생성된다. GEC 는 여러 FEC 를 둘 수 있다.</p>
+<p>EC 는 결국 object 라고할 수 있다. GEC 가 부모 객체이며, FEC 는 GEC의 자식 객체인 것이다.<br>근데 각 GEC/FEC 마다 숨겨놓은 자식들이 더 있다.. <s>설마 바람피운건 아니겠지</s></p>
+<p><img src="https://media.giphy.com/media/glmRyiSI3v5E4/giphy.gif" alt="giphy.com"></p>
+<p>그 자식들은 바로 아래 3명이다.</p>
+<ul>
+<li><strong>Variable Object</strong></li>
+<li><strong>Scope Chain</strong></li>
+<li><strong>this value</strong></li>
+</ul>
+<p><strong>Variable Object (VO)</strong><br>VO 는 변수, 매개변수, 인수, 함수 선언을 가진다. (함수 Expression 은 제외)</p>
+<p><strong>Scope Chain (SC)</strong><br>SC 는 상위 컨텍스트(GEC/FEC)에 대한 변수에 접근하기 위한 목적으로 VO 에 대한 참조를 차례대로 정돈하여 가지고 있다.</p>
+<p><strong>this value</strong><br>(오늘의 주인공) this value 는 GEC/FEC 를 <strong>소유</strong>하고 있는 객체를 <strong>참조하는 변수</strong>이다.<br>window (global object) 객체는 GEC를 포함하므로 GEC의 this value는 window 를 참조하게 된다.</p>
+<p><img src="https://media.giphy.com/media/xT77XWum9yH7zNkFW0/giphy.gif" alt="giphy.com"></p>
+<p>이제 코드로 확인해보자</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// this 는 window 를 참조한다.</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span> === <span class="built_in">window</span>); <span class="comment">// 출력: true</span></div><div class="line"></div><div class="line"><span class="keyword">this</span>.a = <span class="string">'hello'</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a) <span class="comment">// 출력 hello</span></div></pre></td></tr></table></figure>
+<p>근데 strict mode (<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode" target="_blank" rel="external">MDN - strict</a>) 에서는</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">FuncStrict</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">  "use strict"</span>;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">FuncStrict(); <span class="comment">// 출력: undefined</span></div></pre></td></tr></table></figure>
+<p>이유는 strict mode 에서는 this value 가 FEC 생성될 때 할당되어 유지되기 때문이다.</p>
+<p><strong>객체의 메소드에서의 this</strong><br>아래와 같이 객체의 메소드(f) 내에서 사용할 경우 this 는 해당 객체(o)를 가리킨다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">  <span class="attr">p</span>: <span class="string">'Hello!'</span>,</div><div class="line">  <span class="attr">f</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.p;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(o.f()); <span class="comment">// 출력: Hello!</span></div></pre></td></tr></table></figure>
+<p>근데 아래의 경우를 보자.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">  <span class="attr">p</span>: <span class="string">'Hello!'</span>,</div><div class="line">  <span class="attr">f</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> change_p = <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.p = value;</div><div class="line">    &#125;</div><div class="line">    change_p(<span class="string">'Halo'</span>);</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(o.f()); <span class="comment">// 출력: Hello!</span></div></pre></td></tr></table></figure>
+<p>오잉? p 의 값이 그대로이다. 왜 그럴까?<br>혹시나 이 글을 읽으신 분들 중에 아시는 분이 계시다면, 알려주시면 감사하겠다. <s>퀴즈가 아니라 진짜 몰라서다</s></p>
+<p>위 현상을 피하려면,</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">  <span class="attr">p</span>: <span class="string">'Hello!'</span>,</div><div class="line">  <span class="attr">f</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">var</span> change_p = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">      self.p = value;</div><div class="line">    &#125;</div><div class="line">    change_p(<span class="string">'Halo!'</span>);</div><div class="line">    <span class="keyword">return</span> self;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(o.f()); <span class="comment">// 출력: Halo!</span></div></pre></td></tr></table></figure>
+<p>이렇게 피해갈 수는 있다. this 를 SC의 상위 변수(self)에다 미리 담는 방법이 있다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">  <span class="attr">p</span>: <span class="string">'Hello!'</span>,</div><div class="line">  <span class="attr">f</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.change_p(<span class="string">'Halo!'</span>);</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">change_p</span>: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.p = value;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(o.f()); <span class="comment">// 출력: Halo!</span></div></pre></td></tr></table></figure></p>
+<p>옹? 또 이렇게는 된다. 흠.. 정말 궁금하지만, 또 다른 관문이 열릴 수도 있으므로 이 문제는 일단 여기서 일단락 짓자.</p>
+<p><img src="https://media.giphy.com/media/l0MYSiQPbNeLyZJZK/giphy.gif" alt="giphy.com"></p>
+<p><strong>생성자 함수에서의 this</strong><br>함수가 new 키워드와 함께 생성자로서 사용될 때 이 함수내 this 는 새롭게 생성된 객체에 연결된다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.p = <span class="string">'Hello'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> c();</div><div class="line"><span class="built_in">console</span>.log(o.p); <span class="comment">// 출력: Hello</span></div></pre></td></tr></table></figure>
+<p>어려운 내용을 쉽게 푸는게 더 어렵다는 누군가의 말이 생각나서<br>다소 예능(?) 스럽게 작성해보았다. <s>재미는 있네</s> </p>
+<p><strong>참고</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this" target="_blank" rel="external">MDN - this</a></li>
+<li><a href="http://poiemaweb.com/js-execution-context" target="_blank" rel="external">자바스크립트의 동작원리</a></li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -215,7 +251,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://parkseokje.github.io/2017/03/10/objectAndFunction/" data-id="cj0cf7sij000pkq6bkw3xboji" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://parkseokje.github.io/2017/03/16/this/" data-id="cj0cf7sin000wkq6bhopp6qu2" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -346,20 +382,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2017/03/10/namespace/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">새로운</strong>
-        <p class="article-nav-title">
-        
-            Namespace
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/03/09/TheWeirdPartOfJavascript-1/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/03/16/json/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">오래된</strong>
-        <p class="article-nav-title">Boolean and Existence, Default Values</p>
+        <p class="article-nav-title">JSON</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -546,7 +572,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'dev-blog-sjpark';
     
     
-    var disqus_url = 'http://parkseokje.github.io/2017/03/10/objectAndFunction/';
+    var disqus_url = 'http://parkseokje.github.io/2017/03/16/this/';
     
     (function() {
     var dsq = document.createElement('script');
