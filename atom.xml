@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://parkseokje.github.io/"/>
-  <updated>2017-03-17T05:45:26.000Z</updated>
+  <updated>2017-03-22T07:14:54.000Z</updated>
   <id>http://parkseokje.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>closure</title>
+    <link href="http://parkseokje.github.io/2017/03/21/closure/"/>
+    <id>http://parkseokje.github.io/2017/03/21/closure/</id>
+    <published>2017-03-21T12:12:31.000Z</published>
+    <updated>2017-03-22T07:14:54.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;이번 시간에는 &lt;strong&gt;Closure&lt;/strong&gt; (클로저) 에 대해 알아보자.&lt;br&gt;먼저 &lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Closures&quot; tar
+    
+    </summary>
+    
+      <category term="개발" scheme="http://parkseokje.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
+    
+    
+      <category term="javascript" scheme="http://parkseokje.github.io/tags/javascript/"/>
+    
+      <category term="udemy" scheme="http://parkseokje.github.io/tags/udemy/"/>
+    
+  </entry>
   
   <entry>
     <title>this</title>

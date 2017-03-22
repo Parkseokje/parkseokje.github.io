@@ -3,31 +3,40 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Boolean and Existence, Default Values | 석제의 블로그</title>
+    <title>closure | 석제의 블로그</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="javascript,udemy" />
     
-    <meta name="description" content="오늘부터 Udemy 에서 수강한 내용을 요약해보려 한다.오늘은 JavaScript: Understanding the Weird parts 의Boolean and Existence 그리고 Default Values 에 대한 내용이다.
-1234var a; // undefinedif (a) &amp;#123;  console.log(&apos;hello&apos;);&amp;#125;
-위 코드">
+    <meta name="description" content="이번 시간에는 Closure (클로저) 에 대해 알아보자.먼저 MDN - Closure 의 정의를 보면
+클로저는 독립적인 (자유) 변수 (지역적으로 사용되지만, 둘러싼 범위 안에서 정의된 변수)를 참조하는 함수들이다. 다른 말로 하면, 이 함수들은 그들이 생성된 환경을 ‘기억’한다.
+
+음.. 조금 많이 어렵다. 차근차근 정의를 살펴보자.
+
+클로저는 독립적인">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Boolean and Existence, Default Values">
-<meta property="og:url" content="http://parkseokje.github.io/2017/03/09/TheWeirdPartOfJavascript-1/index.html">
+<meta property="og:title" content="closure">
+<meta property="og:url" content="http://parkseokje.github.io/2017/03/21/closure/index.html">
 <meta property="og:site_name" content="석제의 블로그">
-<meta property="og:description" content="오늘부터 Udemy 에서 수강한 내용을 요약해보려 한다.오늘은 JavaScript: Understanding the Weird parts 의Boolean and Existence 그리고 Default Values 에 대한 내용이다.
-1234var a; // undefinedif (a) &amp;#123;  console.log(&apos;hello&apos;);&amp;#125;
-위 코드">
+<meta property="og:description" content="이번 시간에는 Closure (클로저) 에 대해 알아보자.먼저 MDN - Closure 의 정의를 보면
+클로저는 독립적인 (자유) 변수 (지역적으로 사용되지만, 둘러싼 범위 안에서 정의된 변수)를 참조하는 함수들이다. 다른 말로 하면, 이 함수들은 그들이 생성된 환경을 ‘기억’한다.
+
+음.. 조금 많이 어렵다. 차근차근 정의를 살펴보자.
+
+클로저는 독립적인">
 <meta property="og:image" content="http://parkseokje.github.io/images/javascript.png">
-<meta property="og:updated_time" content="2017-03-10T03:04:51.000Z">
+<meta property="og:updated_time" content="2017-03-22T07:14:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Boolean and Existence, Default Values">
-<meta name="twitter:description" content="오늘부터 Udemy 에서 수강한 내용을 요약해보려 한다.오늘은 JavaScript: Understanding the Weird parts 의Boolean and Existence 그리고 Default Values 에 대한 내용이다.
-1234var a; // undefinedif (a) &amp;#123;  console.log(&apos;hello&apos;);&amp;#125;
-위 코드">
+<meta name="twitter:title" content="closure">
+<meta name="twitter:description" content="이번 시간에는 Closure (클로저) 에 대해 알아보자.먼저 MDN - Closure 의 정의를 보면
+클로저는 독립적인 (자유) 변수 (지역적으로 사용되지만, 둘러싼 범위 안에서 정의된 변수)를 참조하는 함수들이다. 다른 말로 하면, 이 함수들은 그들이 생성된 환경을 ‘기억’한다.
+
+음.. 조금 많이 어렵다. 차근차근 정의를 살펴보자.
+
+클로저는 독립적인">
 <meta name="twitter:image" content="http://parkseokje.github.io/images/javascript.png">
     
-    <link rel="canonical" href="http://parkseokje.github.io/2017/03/09/TheWeirdPartOfJavascript-1/"/>
+    <link rel="canonical" href="http://parkseokje.github.io/2017/03/21/closure/"/>
     
         <link rel="alternate" href="/atom.xml" title="석제의 블로그" type="application/atom+xml" />
     
@@ -158,14 +167,14 @@ ga('send', 'pageview');
     enable_page_level_ads: true
   });
 </script>
-                            <article id="post-TheWeirdPartOfJavascript-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-closure" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Boolean and Existence, Default Values
+        closure
         </h1>
     
 
@@ -173,8 +182,8 @@ ga('send', 'pageview');
         
         
             <div class="article-subtitle">
-                <a href="/2017/03/09/TheWeirdPartOfJavascript-1/" class="article-date">
-    <time datetime="2017-03-08T16:43:03.000Z" itemprop="datePublished">2017-03-09</time>
+                <a href="/2017/03/21/closure/" class="article-date">
+    <time datetime="2017-03-21T12:12:31.000Z" itemprop="datePublished">2017-03-21</time>
 </a>
                 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/udemy/">udemy</a></li></ul>
@@ -183,19 +192,39 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>오늘부터 Udemy 에서 수강한 내용을 요약해보려 한다.<br>오늘은 <a href="https://www.udemy.com/understand-javascript/" target="_blank" rel="external">JavaScript: Understanding the Weird parts</a> 의<br>Boolean and Existence 그리고 Default Values 에 대한 내용이다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a; <span class="comment">// undefined</span></div><div class="line"><span class="keyword">if</span> (a) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'hello'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>위 코드에서 <code>if(a)</code> 를 통해 a의 형변환(coerce) 이 발생한다.<br>즉, <code>Boolean(a)</code> 와 동일한 결과를 얻게된다. false 가 되는 경우는 undefined<br>이외에도 null, “”, 0 등이 있다.<br>a의 값이 “abc” 또는 1인 경우에는 어떻게 될까? 이때는 빈문자열(“”) 과 0이 아니므로 <strong>true</strong> 가 되겠다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a;</div><div class="line">a = <span class="number">0</span>;</div><div class="line"><span class="keyword">if</span> (a || a === <span class="number">0</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'hello'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>자 그럼 조금 헷갈리는 코드를 보자. <code>if (a || a === 0)</code>은 어떻게 될까?<br>값을 대입해보면 <code>if (0 || 0 === 0)</code> 이 되는데, hello 가 출력이 될까?<br><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank" rel="external">operator precedence</a> (연산자 우선순위) 에 따르면, === 이 OR 연산자보다 우선순위가 높다고 나온다.<br>따라서 <code>0 === 0</code> 이므로 true, 다음은 <code>0 || true</code> 즉, <code>false OR true</code> 가 되므로 최종결과 값은 <strong>true</strong> 가 된다.</p>
-<p>자 그럼 이제, <strong>Default Values</strong>(기본값) 로 넘어가겠다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello '</span> + name);</div><div class="line">&#125;</div><div class="line"></div><div class="line">greet(); <span class="comment">// output: Hello undefined</span></div></pre></td></tr></table></figure>
-<p>결과는 <code>Hello undefined</code> 라고 찍힌다. 예상한 결과인가?<br>필자는 오류가 나거나 <code>Hello</code> 만 찍힐거라고 예상했다.<br>자 그럼, name을 넘기지 않았을 때 기본값을 지정하고 싶다면?<br>아주 간단하게 할 수 있는 방법이 있다. 바로 <strong>OR</strong> 연산자를 이용하는 것이다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="literal">true</span> || <span class="literal">false</span>;     <span class="comment">// output: true</span></div><div class="line"><span class="literal">undefined</span> || <span class="literal">true</span>; <span class="comment">// output: true</span></div><div class="line"><span class="string">'hello'</span> || <span class="string">'world'</span> <span class="comment">// output: "hello"</span></div></pre></td></tr></table></figure>
-<p>예상한 결과인가? OR 는 왼쪽과 오른쪽의 값들 중 true인 것을 먼저 반환하는 함수이다. 맞다 연산자는 사실 함수이다.<br><blockquote><p>두 값을 파라미터로 받아서 둘 중 true 를 가지고 있는 놈이 있으면 출력해. 둘다 true 이면, 앞에 놈을 먼저 출력하고.</p>
-</blockquote><br>와 같은 내용이 구현되어 있는 것이다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  name = name || <span class="string">'&lt;Enter your name&gt;'</span>;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello '</span> + name);</div><div class="line">&#125;</div><div class="line"></div><div class="line">greet(<span class="string">'World'</span>);</div><div class="line">greet();</div></pre></td></tr></table></figure>
-<p>결과는? 그렇다. <code>Hello World</code> 그리고 <code>Hello &lt;Enter your name&gt;</code> 이 된다.<br>저런 코드를 어디선가 만난다면, 반갑게 인사하자. <strong>Hello OR!</strong></p>
+            <p>이번 시간에는 <strong>Closure</strong> (클로저) 에 대해 알아보자.<br>먼저 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Closures" target="_blank" rel="external">MDN - Closure</a> 의 정의를 보면</p>
+<blockquote><p>클로저는 독립적인 (자유) 변수 (지역적으로 사용되지만, 둘러싼 범위 안에서 정의된 변수)를 참조하는 함수들이다. 다른 말로 하면, 이 함수들은 그들이 생성된 환경을 ‘기억’한다.</p>
+</blockquote>
+<p>음.. 조금 <s>많이</s> 어렵다. 차근차근 정의를 살펴보자.</p>
+<ol>
+<li>클로저는 <strong>독립적인 (자유) 변수</strong>를 참조하는 함수이다.</li>
+<li>다른 말로, 클로저는 <strong>그들이 생성된 환경을 기억</strong>한다.</li>
+</ol>
+<p>자유변수를 기억한다는 의미인가 보군. <s>라고 생각했다면 당신은 천재</s></p>
+<p>예를 들어,</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">return</span> a;</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
+<p>위 코드를 실행하면 <strong>1</strong> 이 나온다. 함수가 종료되고 나면 함수안의 변수 a도 메모리에서 사라진다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> test2 = test();</div><div class="line">test2();</div></pre></td></tr></table></figure>
+<p>이렇게 하면 어떻게 될까? test 함수는 종료되었으니, a 도 사라졌을 것이다.<br>근데 해보면 <strong>1</strong> 이 찍힌다. <s>대충 그럴거 같더라ㅎㅎ</s></p>
+<p>이때 <strong>a</strong> 가 바로 자유변수이다. 그리고 <strong>test();</strong> 를 통해 반환된 함수 표현식(function expression) <strong>return function() ..</strong> 이 바로 클로저 이다.<br>이 함수가 자유변수인 a 를 기억한다는 의미인 것이다. <s>쉽게 말하면 자유변수를 훔쳐서 나온거지</s></p>
+<p>다시 한번 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Closures" target="_blank" rel="external">MDN - Closure</a> 정의를 살펴보자.</p>
+<blockquote><p>클로저는 독립적인 (자유) 변수 (지역적으로 사용되지만, 둘러싼 범위 안에서 정의된 변수)를 참조하는 함수들이다. 다른 말로 하면, 이 함수들은 그들이 생성된 환경을 ‘기억’한다.</p>
+</blockquote>
+<p>조금 감이 오는가? 그렇다면 심화예제로 넘어가보자.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> arr = [];</div><div class="line"></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</div><div class="line">    arr.push(</div><div class="line">      <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(i);</div><div class="line">      &#125;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> arr;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> test2 = test();</div><div class="line"></div><div class="line">test2[<span class="number">0</span>](); <span class="comment">// 3 출력: arr[0]() 와 동일</span></div><div class="line">test2[<span class="number">1</span>](); <span class="comment">// 3 출력</span></div><div class="line">test2[<span class="number">2</span>](); <span class="comment">// 3 출력</span></div></pre></td></tr></table></figure>
+<p>우선 하나씩 살펴보자.<br>arr 는 배열이다. 배열안에는 무엇이든 넣을 수 있는데, 위의 경우 i값을 출력하는 함수 표현식(function expression) 을 3번 넣고(arr.push) 있다. (<strong>넣기만 할 뿐 함수가 실행되진 않는다.</strong>)<br>그리고 arr 을 return 하고 있다.</p>
+<p><span style="color: red;">그렇다면 여기서 클로저가 있을까? 있다면, 과연 어디에 있을까?</span></p>
+<p>클로저는 자유 변수를 기억하는 함수라고 했다.</p>
+<p>즉, 최초 함수(test)의 실행이 끝난 뒤 <strong>반환되는 함수(들)</strong>일 것이다. 그렇다면, arr 변수에 들어있는 함수 표현식이 바로 <strong>클로저</strong>임을 알 수 있다. <s>arr 은 위장이야 위장</s><br>근데 이상한 점이 있다. <strong>왜 모두 3을 출력할까?</strong></p>
+<p>쉽게 설명하면,<br>클로저가 가지고 나온 자유변수 i 는 일종의 <strong>메모리 주소</strong>, 즉 참조라고 할 수 있다.<br>클로저 즉 함수를 실행할 때 비로서 자유변수 메모리에 있는 값을 꺼내게 되므로, 이때의 i 의 값은 for loop 이 완전히 끝난 상태의 결과값인 <strong>3</strong>이 되는 것이다.</p>
+<p>만약 클로저 마다 실행당시의 자유변수의 값을 유지하고 싶다면 어떻게 해야 할까?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> arr = [];</div><div class="line">  <span class="keyword">var</span> sometext = <span class="string">'Hello'</span>;</div><div class="line"></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</div><div class="line">    arr.push(</div><div class="line">      <span class="comment">// 즉시 실행 함수 표현식(Immediately Invoked Function Expression, IIFE)</span></div><div class="line">      (<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">//&lt;-- 이 함수가 바로!!</span></div><div class="line">          <span class="built_in">console</span>.log(i, j, sometext);</div><div class="line">        &#125;</div><div class="line">      &#125;(i))</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> arr;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> test2 = test();</div><div class="line"></div><div class="line">test2[<span class="number">0</span>](); <span class="comment">// 3 0 "Hello" 출력</span></div><div class="line">test2[<span class="number">1</span>](); <span class="comment">// 3 1 "Hello" 출력</span></div><div class="line">test2[<span class="number">2</span>](); <span class="comment">// 3 2 "Hello" 출력</span></div></pre></td></tr></table></figure>
+<p>IIFE 는 즉시 실행되는 함수 표현식이다. 이전에 자유변수였던 i 를 j 를 통해 주입받고 있다.<br>그리고 마지막에 <strong>또 다른 함수표현식을 리턴</strong>하고 있다. <s>이 놈이 또 숨어있네</s><br>클로저가 보이는가? 그렇다. 바로 IIFE 안에 있는 return 되고 있는 함수 표현식이 바로 <strong>클로저</strong> 가 되겠다.</p>
+<p>이전과 다른 점은, 이번에는 i 가 아니라 j 를 참고하게 되므로, 정상적인 값이 출력되는 것을 알 수 있다.</p>
+<p>다시 정의를 살펴보자</p>
+<blockquote><p>클로저는 독립적인 (자유) 변수 (지역적으로 사용되지만, 둘러싼 범위 안에서 정의된 변수)를 참조하는 함수들이다. 다른 말로 하면, 이 함수들은 그들이 생성된 환경을 ‘기억’한다.</p>
+</blockquote>
+<p>환경이란 바로 클로저 주의의 실행환경을 의미한다.<br>위 예제에서 실행환경(Execution Context) 은 모두 2 개이다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123; .. <span class="comment">// 첫 번째 실행환경</span></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123; ...&#125;) <span class="comment">// 두 번째 실행환경</span></div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -203,7 +232,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://parkseokje.github.io/2017/03/09/TheWeirdPartOfJavascript-1/" data-id="cj0kmwgss0004rd6bu37oqyp9" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://parkseokje.github.io/2017/03/21/closure/" data-id="cj0kmwgsk0000rd6brqtocisv" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -334,20 +363,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2017/03/10/objectAndFunction/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">새로운</strong>
-        <p class="article-nav-title">
-        
-            Object and Function
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/03/07/jwt/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/03/16/this/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">오래된</strong>
-        <p class="article-nav-title">jwt</p>
+        <p class="article-nav-title">this</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -534,7 +553,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'dev-blog-sjpark';
     
     
-    var disqus_url = 'http://parkseokje.github.io/2017/03/09/TheWeirdPartOfJavascript-1/';
+    var disqus_url = 'http://parkseokje.github.io/2017/03/21/closure/';
     
     (function() {
     var dsq = document.createElement('script');
